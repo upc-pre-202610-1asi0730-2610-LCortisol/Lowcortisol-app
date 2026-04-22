@@ -1,16 +1,16 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/app.9bnjzohkmc.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"9bnjzohkmc"},{"Name":"integrity","Value":"sha256-O5CegKdBOhaO08NfswiTM7jaKgm0CRFYHLXH0xpr8Zg="},{"Name":"label","Value":"_content/LowCortisol.Web/app.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"14224"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022O5CegKdBOhaO08NfswiTM7jaKgm0CRFYHLXH0xpr8Zg=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Apr 2026 06:27:18 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/app.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-krQ1WnFYkWkJWPoWT\u002BL3g\u002BI3iOxOjto95/X8SimTWkM="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"10237"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022krQ1WnFYkWkJWPoWT\u002BL3g\u002BI3iOxOjto95/X8SimTWkM=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Apr 2026 06:10:20 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/app.qa9qz8yze3.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"qa9qz8yze3"},{"Name":"integrity","Value":"sha256-krQ1WnFYkWkJWPoWT\u002BL3g\u002BI3iOxOjto95/X8SimTWkM="},{"Name":"label","Value":"_content/LowCortisol.Web/app.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10237"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022krQ1WnFYkWkJWPoWT\u002BL3g\u002BI3iOxOjto95/X8SimTWkM=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Apr 2026 06:10:20 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-O5CegKdBOhaO08NfswiTM7jaKgm0CRFYHLXH0xpr8Zg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"14224"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022O5CegKdBOhaO08NfswiTM7jaKgm0CRFYHLXH0xpr8Zg=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Apr 2026 06:27:18 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/favicon.ifv42okdf2.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.png'))</AssetFile>
