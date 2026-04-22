@@ -1,124 +1,71 @@
 ﻿@page "/devices"
 @rendermode InteractiveServer
 @implements IDisposable
+
 @inject LowCortisol.Web.Services.AppStateService AppState
+@inject LowCortisol.Web.Services.I18nService I18n
 
 <div class="space-y-5">
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-3">
         <a href="/profile" class="top-back">‹</a>
-        <h1 class="page-title">Devices</h1>
+        <h1 class="page-title">@I18n["devices.title"]</h1>
     </div>
 
     <div class="section-divider"></div>
 
-    <div class="device-grid">
+    <div class="grid grid-cols-2 gap-3">
         @foreach (var item in AppState.Devices)
         {
-            <div class="device-box fade-up @(item.IsOnline ? "" : "opacity-70")">
-                <div class="flex justify-between items-start mb-5">
-                    <div class="icon-chip @(item.IsOnline ? "bg-chip-blue" : "bg-chip-gray") text-xl">
-                        @item.Icon
-                    </div>
-
-                    <div class="flex items-center gap-3">
-                        <div class="signal-indicator @(item.IsOnline ? "signal-online" : "signal-offline")">
-                            @for (int i = 1; i <= 4; i++)
-                            {
-                                <span class="signal-bar signal-bar-@i @(item.Signal >= i ? "active" : "")"></span>
-                            }
+            <div class="soft-card p-[18px] device-card fade-up @(item.IsOnline ? "" : "device-card-offline")">
+                <div class="flex items-start justify-between gap-2">
+                    <div class="flex items-center gap-2">
+                        <div class="icon-chip @(item.IsOnline ? "bg-chip-blue" : "bg-chip-gray") text-2xl">
+                            @item.Icon
                         </div>
 
-                        <button class="device-power-btn @(item.IsOnline ? "device-power-on" : "device-power-off")"
-                                @onclick="() => ToggleDevice(item.Id)">
-                            @(item.IsOnline ? "ON" : "OFF")
-                        </button>
+                        <div class="signal-bars @(item.IsOnline ? "" : "offline")">
+                            <span class="bar @(item.Signal >= 1 ? "active" : "")"></span>
+                            <span class="bar @(item.Signal >= 2 ? "active" : "")"></span>
+                            <span class="bar @(item.Signal >= 3 ? "active" : "")"></span>
+                            <span class="bar @(item.Signal >= 4 ? "active" : "")"></span>
+                        </div>
+                    </div>
+
+                    <button type="button"
+                            class="device-toggle @(item.IsOnline ? "on" : "off")"
+                            @onclick="() => ToggleDevice(item.Id)">
+                        @(item.IsOnline ? "ON" : "OFF")
+                    </button>
+                </div>
+
+                <div class="mt-5">
+                    <div class="text-[16px] leading-[1.15] font-bold text-slate-900">
+                        @item.Name
+                    </div>
+
+                    <div class="text-sm text-gray-500 mt-1">
+                        @DeviceTypeLabel(item.Type)
                     </div>
                 </div>
 
-                <div class="text-2xl font-semibold leading-tight">@item.Name</div>
-                <div class="text-base text-gray-500">@item.Type</div>
-
-                <div class="mt-4 text-sm font-bold tracking-wide @(item.IsOnline ? "text-green-500" : "text-gray-500")">
-                    ● @(item.IsOnline ? "ONLINE" : "OFFLINE")
+                <div class="mt-4 text-sm font-bold @(item.IsOnline ? "device-online" : "device-offline")">
+                    <span class="mr-1">•</span>
+                    @(item.IsOnline ? I18n["devices.online"] : I18n["devices.offline"])
                 </div>
             </div>
         }
     </div>
 
-    <button class="secondary-btn !border-2 !border-dashed !text-gray-500 !font-bold"
-            @onclick="OpenAddDeviceModal">
-        ＋ ADD NEW DEVICE
+    <button type="button" class="add-device-btn" @onclick="OpenAddDeviceModal">
+        + @I18n["devices.add"]
     </button>
 </div>
 
-@if (showAddModal)
-{
-    <div class="modal-backdrop" @onclick="CloseAddDeviceModal">
-        <div class="modal-card scale-in" @onclick:stopPropagation="true">
-            <h3 class="text-2xl font-bold mb-5">Add new device</h3>
-
-            <div class="space-y-4">
-                <div>
-                    <label class="block text-sm font-semibold text-gray-600 mb-2">Name</label>
-                    <input class="device-input" @bind="newDeviceName" placeholder="Ex: Bathroom sensor" />
-                </div>
-
-                <div>
-                    <label class="block text-sm font-semibold text-gray-600 mb-2">Type</label>
-                    <select class="device-input" @bind="newDeviceType">
-                        <option>Sensor</option>
-                        <option>Leak sensor</option>
-                        <option>Smart valve</option>
-                        <option>Hub</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block text-sm font-semibold text-gray-600 mb-2">Icon</label>
-                    <select class="device-input" @bind="newDeviceIcon">
-                        <option value="💧">💧 Water</option>
-                        <option value="🔥">🔥 Gas</option>
-                        <option value="🌡">🌡 Temperature</option>
-                        <option value="◉">◉ Hub</option>
-                        <option value="◔">◔ Gauge</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block text-sm font-semibold text-gray-600 mb-2">Signal</label>
-                    <select class="device-input" @bind="newDeviceSignal">
-                        <option value="1">1 bar</option>
-                        <option value="2">2 bars</option>
-                        <option value="3">3 bars</option>
-                        <option value="4">4 bars</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="flex justify-end gap-3 mt-8">
-                <button class="secondary-btn !w-auto !px-6 !py-3" @onclick="CloseAddDeviceModal">
-                    Cancel
-                </button>
-
-                <button class="primary-btn !w-auto !px-6 !py-3" @onclick="AddDevice">
-                    Add device
-                </button>
-            </div>
-        </div>
-    </div>
-}
-
 @code {
-    private bool showAddModal;
-
-    private string newDeviceName = "";
-    private string newDeviceType = "Sensor";
-    private string newDeviceIcon = "💧";
-    private int newDeviceSignal = 4;
-
     protected override void OnInitialized()
     {
         AppState.OnChange += Refresh;
+        I18n.OnChange += Refresh;
     }
 
     private void ToggleDevice(string id)
@@ -128,39 +75,31 @@
 
     private void OpenAddDeviceModal()
     {
-        newDeviceName = "";
-        newDeviceType = "Sensor";
-        newDeviceIcon = "💧";
-        newDeviceSignal = 4;
-        showAddModal = true;
+        // Si ya tienes modal, aquí llamas a tu lógica.
+        // Ejemplo:
+        // showAddModal = true;
     }
 
-    private void CloseAddDeviceModal()
+    private string DeviceTypeLabel(string? type)
     {
-        showAddModal = false;
-    }
-
-    private void AddDevice()
-    {
-        if (string.IsNullOrWhiteSpace(newDeviceName))
-            return;
-
-        AppState.AddDevice(new LowCortisol.Web.Services.DeviceState
+        return type?.ToLowerInvariant() switch
         {
-            Id = Guid.NewGuid().ToString("N"),
-            Name = newDeviceName.Trim(),
-            Type = newDeviceType,
-            Icon = newDeviceIcon,
-            Signal = newDeviceSignal,
-            IsOnline = true
-        });
-
-        showAddModal = false;
+            "smart valve" => I18n["devices.smartValve"],
+            "leak sensor" => I18n["devices.leakSensor"],
+            "sensor" => I18n["devices.sensor"],
+            "hub" => I18n["devices.hub"],
+            _ => type ?? ""
+        };
     }
-    private void Refresh() => InvokeAsync(StateHasChanged);
+
+    private void Refresh()
+    {
+        InvokeAsync(StateHasChanged);
+    }
 
     public void Dispose()
     {
         AppState.OnChange -= Refresh;
+        I18n.OnChange -= Refresh;
     }
 }

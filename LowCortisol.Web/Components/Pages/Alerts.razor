@@ -1,7 +1,10 @@
 ﻿@page "/alerts"
+@rendermode InteractiveServer
+@implements IDisposable
+@inject LowCortisol.Web.Services.I18nService I18n
 
 <div class="space-y-5">
-    <h1 class="page-title">Alerts</h1>
+    <h1 class="page-title">@I18n["alerts.title"]</h1>
     <div class="section-divider"></div>
 
     @foreach (var item in alerts)
@@ -20,15 +23,33 @@
 </div>
 
 @code {
-    private List<AlertItem> alerts = new()
+    private List<AlertItem> alerts = new();
+
+    protected override void OnInitialized()
     {
-        new("💧", "bg-chip-red", "Water leak detected", "Kitchen sensor · 2.1 L spilled", "2 MIN AGO"),
-        new("🔥", "bg-chip-orange", "Gas pressure low", "Main line at 0.6 bar", "1 H AGO"),
-        new("🔋", "bg-chip-orange", "Sensor battery low", "Bathroom · 12% remaining", "3 H AGO"),
-        new("〰", "bg-chip-blue", "Unusual flow pattern", "Garden valve · 4× normal", "YESTERDAY"),
-        new("◉", "bg-chip-blue", "Device reconnected", "Boiler valve back online", "YESTERDAY"),
-        new("⚠", "bg-chip-blue", "Monthly check due", "Inspection scheduled Friday", "2 DAYS AGO")
-    };
+        I18n.OnChange += RefreshAlerts;
+        RefreshAlerts();
+    }
+
+    private void RefreshAlerts()
+    {
+        alerts = new()
+        {
+            new("💧", "bg-chip-red", I18n["alerts.waterLeakTitle"], I18n["alerts.waterLeakDesc"], I18n["alerts.twoMinAgo"]),
+            new("🔥", "bg-chip-orange", I18n["alerts.gasLowTitle"], I18n["alerts.gasLowDesc"], I18n["alerts.oneHourAgo"]),
+            new("🔋", "bg-chip-orange", I18n["alerts.batteryLowTitle"], I18n["alerts.batteryLowDesc"], I18n["alerts.threeHoursAgo"]),
+            new("〰", "bg-chip-blue", I18n["alerts.flowTitle"], I18n["alerts.flowDesc"], I18n["alerts.yesterday"]),
+            new("◉", "bg-chip-blue", I18n["alerts.reconnectedTitle"], I18n["alerts.reconnectedDesc"], I18n["alerts.yesterday"]),
+            new("⚠", "bg-chip-blue", I18n["alerts.checkTitle"], I18n["alerts.checkDesc"], I18n["alerts.twoDaysAgo"])
+        };
+
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        I18n.OnChange -= RefreshAlerts;
+    }
 
     public record AlertItem(string Icon, string IconClass, string Title, string Description, string When);
 }

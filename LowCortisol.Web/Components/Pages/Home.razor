@@ -2,33 +2,39 @@
 @rendermode InteractiveServer
 @implements IDisposable
 @inject LowCortisol.Web.Services.AppStateService AppState
+@inject LowCortisol.Web.Services.I18nService I18n
 
 <div class="space-y-5">
-    <h1 class="page-title">LOWCORTISOL</h1>
+    <h1 class="page-title">@I18n["app.name"]</h1>
     <div class="section-divider"></div>
 
     <div class="soft-card p-5 flex items-center gap-4">
         <div class="icon-chip bg-chip-green text-2xl">🛡</div>
         <div>
-            <div class="text-xs font-bold tracking-widest text-gray-500">SYSTEM STATUS</div>
-            <div class="text-2xl font-bold">All systems secure</div>
+            <div class="text-xs font-bold tracking-widest text-gray-500">
+                @I18n["home.systemStatus"]
+            </div>
+            <div class="text-2xl font-bold">
+                @I18n["home.secure"]
+            </div>
         </div>
     </div>
 
     <div class="grid grid-cols-2 gap-4">
-        <CircularRing Label="WATER"
+        <CircularRing Label="@I18n["home.water"]"
                       Value="@AppState.WaterPercentage"
                       ValueChanged="OnWaterChanged"
                       StrokeColor="#1b84f4" />
 
-        <CircularRing Label="GAS"
+        <CircularRing Label="@I18n["home.gas"]"
                       Value="@AppState.GasPercentage"
                       ValueChanged="OnGasChanged"
                       StrokeColor="#ff5a0a" />
     </div>
 
-    <button class="danger-btn" @onclick="EmergencyOff">
-        ⦿ Emergency shut-off
+    <button type="button" class="danger-btn" @onclick="EmergencyOff">
+        <span class="danger-btn-icon">⦿</span>
+        <span>@I18n["home.emergency"]</span>
     </button>
 </div>
 
@@ -36,6 +42,7 @@
     protected override void OnInitialized()
     {
         AppState.OnChange += Refresh;
+        I18n.OnChange += Refresh;
     }
 
     private void OnWaterChanged(int value)
@@ -61,5 +68,6 @@
     public void Dispose()
     {
         AppState.OnChange -= Refresh;
+        I18n.OnChange -= Refresh;
     }
 }

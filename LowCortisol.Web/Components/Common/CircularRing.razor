@@ -3,6 +3,7 @@
 @using Microsoft.AspNetCore.Components
 @implements IAsyncDisposable
 @inject IJSRuntime JS
+@inject LowCortisol.Web.Services.I18nService I18n
 
 <div class="ring-card">
     <div class="text-center text-sm tracking-widest font-semibold text-gray-500 mb-2">
@@ -43,13 +44,13 @@
             </div>
 
             <div class="text-sm font-bold text-green-500 tracking-wider mt-2">
-                @(Value > 0 ? "OPEN" : "OFF")
+                @(Value > 0 ? I18n["home.open"] : I18n["home.closed"])
             </div>
         </div>
     </div>
 
     <p class="text-center text-sm text-gray-500 mt-3">
-        Drag the ring · double-tap to toggle
+        @I18n["home.dragHint"]
     </p>
 </div>
 
@@ -68,11 +69,8 @@
     private double Circumference => 2 * Math.PI * Radius;
     private double DashOffset => Circumference * (1 - (Math.Clamp(Value, 0, 100) / 100.0));
 
-    private string CircumferenceText =>
-        Circumference.ToString(CultureInfo.InvariantCulture);
-
-    private string DashOffsetText =>
-        DashOffset.ToString(CultureInfo.InvariantCulture);
+    private string CircumferenceText => Circumference.ToString(CultureInfo.InvariantCulture);
+    private string DashOffsetText => DashOffset.ToString(CultureInfo.InvariantCulture);
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {

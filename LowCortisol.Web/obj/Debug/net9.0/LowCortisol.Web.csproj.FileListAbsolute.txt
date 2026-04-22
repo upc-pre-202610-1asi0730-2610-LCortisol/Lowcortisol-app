@@ -110,7 +110,6 @@ C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Web\obj\Debug\net9.0\Low
 C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Web\obj\Debug\net9.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
 C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Web\obj\Debug\net9.0\scopedcss\bundle\LowCortisol.Web.styles.css
 C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Web\obj\Debug\net9.0\scopedcss\projectbundle\LowCortisol.Web.bundle.scp.css
-C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Web\obj\Debug\net9.0\compressed\npkql323fo-8pmx74sjcz.gz
 C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Web\obj\Debug\net9.0\compressed\wlni0ev8um-fproxixllz.gz
 C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Web\obj\Debug\net9.0\compressed\llbpt9y1mu-t1cqhe9u97.gz
 C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Web\obj\Debug\net9.0\compressed\1bb43qzczg-c2jlpeoesf.gz
@@ -173,3 +172,8 @@ C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Web\obj\Debug\net9.0\ref
 C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Web\obj\Debug\net9.0\LowCortisol.Web.pdb
 C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Web\obj\Debug\net9.0\LowCortisol.Web.genruntimeconfig.cache
 C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Web\obj\Debug\net9.0\ref\LowCortisol.Web.dll
+C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Web\obj\Debug\net9.0\compressed\rr6c3gpozf-3lmsmvssee.gz
+C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Web\obj\Debug\net9.0\compressed\npkql323fo-qa9qz8yze3.gz
+C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Web\obj\Debug\net9.0\compressed\cmxmvbjnvi-tphupu1eg2.gz
+C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Web\obj\Debug\net9.0\compressed\b5lxal9l5m-1onmbojt2q.gz
+C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Web\obj\Debug\net9.0\compressed\agdk857eqt-kinao4iq90.gz

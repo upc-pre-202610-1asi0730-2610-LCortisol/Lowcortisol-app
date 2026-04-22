@@ -13,6 +13,22 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
+      "Id": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\i18n\\en.json",
+      "PackagePath": "staticwebassets\\i18n\\en.json"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\i18n\\es.json",
+      "PackagePath": "staticwebassets\\i18n\\es.json"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\i18n\\i18n.js",
+      "PackagePath": "staticwebassets\\i18n\\i18n.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\i18n\\pt.json",
+      "PackagePath": "staticwebassets\\i18n\\pt.json"
+    },
+    {
       "Id": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\js\\circularRing.js",
       "PackagePath": "staticwebassets\\js\\circularRing.js"
     },

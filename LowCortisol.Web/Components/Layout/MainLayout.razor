@@ -1,10 +1,33 @@
-﻿@inherits Microsoft.AspNetCore.Components.LayoutComponentBase
-@using Microsoft.AspNetCore.Components
-@using Microsoft.AspNetCore.Components.Routing
+﻿@using Microsoft.AspNetCore.Components.Web
+@inherits LayoutComponentBase
+@implements IDisposable
 @inject NavigationManager Nav
+@inject I18nService I18n
 
 <div class="page-shell">
-    <main class="page-content fade-up">
+    <div class="px-5 pt-4 flex justify-end">
+        <div class="lang-switch">
+            <button type="button"
+                    class="lang-btn @(selectedLang == "es" ? "active" : "")"
+                    @onclick="SwitchToEs">
+                ES
+            </button>
+
+            <button type="button"
+                    class="lang-btn @(selectedLang == "en" ? "active" : "")"
+                    @onclick="SwitchToEn">
+                EN
+            </button>
+
+            <button type="button"
+                    class="lang-btn @(selectedLang == "pt" ? "active" : "")"
+                    @onclick="SwitchToPt">
+                PT
+            </button>
+        </div>
+    </div>
+
+    <main class="page-content" @key="_langVersion">
         @Body
     </main>
 
@@ -12,28 +35,51 @@
         <div class="bottom-nav-inner">
             <a href="/" class="nav-item @(IsActive("/"))">
                 <span style="font-size:22px;">⌂</span>
-                <span>HOME</span>
+                <span>@I18n["nav.home"]</span>
             </a>
 
             <a href="/alerts" class="nav-item @(IsActive("/alerts"))">
                 <span style="font-size:20px;">◌</span>
-                <span>ALERTS</span>
+                <span>@I18n["nav.alerts"]</span>
             </a>
 
             <a href="/valves" class="nav-item @(IsActive("/valves"))">
                 <span style="font-size:20px;">≡</span>
-                <span>VALVES</span>
+                <span>@I18n["nav.valves"]</span>
             </a>
 
             <a href="/profile" class="nav-item @(IsActive("/profile"))">
                 <span style="font-size:20px;">◠</span>
-                <span>PROFILE</span>
+                <span>@I18n["nav.profile"]</span>
             </a>
         </div>
     </nav>
 </div>
 
 @code {
+    private int _langVersion = 0;
+    private string selectedLang = "es";
+
+    protected override async Task OnInitializedAsync()
+    {
+        I18n.OnChange += RefreshLayout;
+        await I18n.InitializeAsync("es");
+        selectedLang = I18n.CurrentLanguage;
+    }
+
+    private async Task SwitchToEs() => await SwitchLanguage("es");
+    private async Task SwitchToEn() => await SwitchLanguage("en");
+    private async Task SwitchToPt() => await SwitchLanguage("pt");
+
+    private async Task SwitchLanguage(string lang)
+    {
+        selectedLang = lang;
+        await I18n.SetLanguageAsync(lang);
+
+        _langVersion++;
+        await InvokeAsync(StateHasChanged);
+    }
+
     private string IsActive(string route)
     {
         var current = Nav.ToBaseRelativePath(Nav.Uri);
@@ -46,5 +92,16 @@
             return "active";
 
         return "";
+    }
+
+    private void RefreshLayout()
+    {
+        _langVersion++;
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        I18n.OnChange -= RefreshLayout;
     }
 }

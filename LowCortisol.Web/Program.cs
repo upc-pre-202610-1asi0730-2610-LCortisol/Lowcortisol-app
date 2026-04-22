@@ -12,6 +12,7 @@ builder.Services.AddRazorComponents()
 builder.Services.AddScoped<IDeviceRepository, DeviceRepository>();
 builder.Services.AddScoped<DeviceService>();
 builder.Services.AddScoped<AppStateService>();
+builder.Services.AddScoped<I18nService>();
 
 var app = builder.Build();
 

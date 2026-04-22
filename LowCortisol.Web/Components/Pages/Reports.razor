@@ -1,12 +1,15 @@
 ﻿@page "/reports"
+@rendermode InteractiveServer
+@implements IDisposable
 @using LowCortisol.Application.Services
 @using LowCortisol.Domain.Entities
 @inject DeviceService DeviceService
+@inject LowCortisol.Web.Services.I18nService I18n
 
 <div class="space-y-5">
     <div class="flex items-center gap-4">
         <a href="/profile" class="top-back">‹</a>
-        <h1 class="page-title">Reports</h1>
+        <h1 class="page-title">@I18n["reports.title"]</h1>
     </div>
 
     <div class="section-divider"></div>
@@ -21,19 +24,19 @@
     {
         <div class="grid grid-cols-2 gap-3">
             <div class="rounded-[22px] p-5 text-white shadow-lg bg-gradient-to-r from-sky-500 to-blue-500">
-                <div class="text-sm font-bold tracking-widest opacity-90">WATER</div>
+                <div class="text-sm font-bold tracking-widest opacity-90">@I18n["reports.water"]</div>
                 <div class="text-5xl font-black mt-2">@report.WaterConsumption.ToString("F0") L</div>
             </div>
 
             <div class="rounded-[22px] p-5 text-white shadow-lg bg-gradient-to-r from-orange-500 to-orange-600">
-                <div class="text-sm font-bold tracking-widest opacity-90">GAS</div>
+                <div class="text-sm font-bold tracking-widest opacity-90">@I18n["reports.gas"]</div>
                 <div class="text-5xl font-black mt-2">@report.GasConsumption.ToString("F0") m³</div>
             </div>
         </div>
 
         <div class="soft-card p-5">
             <div class="flex items-center justify-between mb-6">
-                <h2 class="text-xl font-bold">Consumption</h2>
+                <h2 class="text-xl font-bold">@I18n["reports.consumption"]</h2>
 
                 <div class="bg-gray-100 rounded-full p-1 flex">
                     @foreach (var p in new[] { "7D", "30D", "90D" })
@@ -76,11 +79,11 @@
         </div>
 
         <button class="secondary-btn">
-            🗓 Filter by date
+            🗓 @I18n["reports.filter"]
         </button>
 
         <button class="primary-btn">
-            ⬇ Export report
+            ⬇ @I18n["reports.export"]
         </button>
     }
 </div>
@@ -92,6 +95,7 @@
 
     protected override async Task OnInitializedAsync()
     {
+        I18n.OnChange += Refresh;
         await LoadData("30D");
     }
 
@@ -125,6 +129,13 @@
         }
 
         return list;
+    }
+
+    private void Refresh() => InvokeAsync(StateHasChanged);
+
+    public void Dispose()
+    {
+        I18n.OnChange -= Refresh;
     }
 
     public record ChartBarVm(int Water, int Gas);
