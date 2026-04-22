@@ -9,3 +9,15 @@ C:\Users\Asus\RiderProjects\LowCortisol\LowCortisol.Domain\obj\Debug\net9.0\LowC
 C:\Users\Asus\RiderProjects\LowCortisol\LowCortisol.Domain\obj\Debug\net9.0\refint\LowCortisol.Domain.dll
 C:\Users\Asus\RiderProjects\LowCortisol\LowCortisol.Domain\obj\Debug\net9.0\LowCortisol.Domain.pdb
 C:\Users\Asus\RiderProjects\LowCortisol\LowCortisol.Domain\obj\Debug\net9.0\ref\LowCortisol.Domain.dll
+C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Domain\bin\Debug\net9.0\LowCortisol.Domain.deps.json
+C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Domain\bin\Debug\net9.0\LowCortisol.Domain.dll
+C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Domain\bin\Debug\net9.0\LowCortisol.Domain.pdb
+C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Domain\obj\Debug\net9.0\LowCortisol.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Domain\obj\Debug\net9.0\LowCortisol.Domain.AssemblyInfoInputs.cache
+C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Domain\obj\Debug\net9.0\LowCortisol.Domain.AssemblyInfo.cs
+C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Domain\obj\Debug\net9.0\LowCortisol.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Domain\obj\Debug\net9.0\LowCortisol.Domain.sourcelink.json
+C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Domain\obj\Debug\net9.0\LowCortisol.Domain.dll
+C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Domain\obj\Debug\net9.0\refint\LowCortisol.Domain.dll
+C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Domain\obj\Debug\net9.0\LowCortisol.Domain.pdb
+C:\Users\Asus\RiderProjects\Lowcortisol-app\LowCortisol.Domain\obj\Debug\net9.0\ref\LowCortisol.Domain.dll

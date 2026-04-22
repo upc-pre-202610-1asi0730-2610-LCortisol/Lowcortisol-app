@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Web\\LowCortisol.Web.csproj": {}
+    "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\LowCortisol.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Application\\LowCortisol.Application.csproj": {
+    "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Application\\LowCortisol.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Application\\LowCortisol.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Application\\LowCortisol.Application.csproj",
         "projectName": "LowCortisol.Application",
-        "projectPath": "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Application\\LowCortisol.Application.csproj",
+        "projectPath": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Application\\LowCortisol.Application.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Application\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Domain\\LowCortisol.Domain.csproj": {
-                "projectPath": "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Domain\\LowCortisol.Domain.csproj"
+              "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Domain\\LowCortisol.Domain.csproj": {
+                "projectPath": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Domain\\LowCortisol.Domain.csproj"
               }
             }
           }
@@ -73,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Domain\\LowCortisol.Domain.csproj": {
+    "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Domain\\LowCortisol.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Domain\\LowCortisol.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Domain\\LowCortisol.Domain.csproj",
         "projectName": "LowCortisol.Domain",
-        "projectPath": "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Domain\\LowCortisol.Domain.csproj",
+        "projectPath": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Domain\\LowCortisol.Domain.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -138,14 +138,14 @@
         }
       }
     },
-    "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Infrastructure\\LowCortisol.Infrastructure.csproj": {
+    "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Infrastructure\\LowCortisol.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Infrastructure\\LowCortisol.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Infrastructure\\LowCortisol.Infrastructure.csproj",
         "projectName": "LowCortisol.Infrastructure",
-        "projectPath": "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Infrastructure\\LowCortisol.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Infrastructure\\LowCortisol.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -166,11 +166,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Application\\LowCortisol.Application.csproj": {
-                "projectPath": "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Application\\LowCortisol.Application.csproj"
+              "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Application\\LowCortisol.Application.csproj": {
+                "projectPath": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Application\\LowCortisol.Application.csproj"
               },
-              "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Domain\\LowCortisol.Domain.csproj": {
-                "projectPath": "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Domain\\LowCortisol.Domain.csproj"
+              "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Domain\\LowCortisol.Domain.csproj": {
+                "projectPath": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Domain\\LowCortisol.Domain.csproj"
               }
             }
           }
@@ -210,14 +210,14 @@
         }
       }
     },
-    "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Web\\LowCortisol.Web.csproj": {
+    "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\LowCortisol.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Web\\LowCortisol.Web.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\LowCortisol.Web.csproj",
         "projectName": "LowCortisol.Web",
-        "projectPath": "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Web\\LowCortisol.Web.csproj",
+        "projectPath": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\LowCortisol.Web.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Web\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -238,8 +238,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Infrastructure\\LowCortisol.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Infrastructure\\LowCortisol.Infrastructure.csproj"
+              "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Infrastructure\\LowCortisol.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Infrastructure\\LowCortisol.Infrastructure.csproj"
               }
             }
           }

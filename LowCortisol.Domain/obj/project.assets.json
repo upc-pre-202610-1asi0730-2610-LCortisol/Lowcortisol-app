@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Domain\\LowCortisol.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Domain\\LowCortisol.Domain.csproj",
       "projectName": "LowCortisol.Domain",
-      "projectPath": "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Domain\\LowCortisol.Domain.csproj",
+      "projectPath": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Domain\\LowCortisol.Domain.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Asus\\RiderProjects\\LowCortisol\\LowCortisol.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
