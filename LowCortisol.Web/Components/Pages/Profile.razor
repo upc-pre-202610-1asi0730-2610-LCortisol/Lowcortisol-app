@@ -102,7 +102,7 @@ else
     private async Task SignOut()
     {
         await Auth.LogoutAsync();
-        Nav.NavigateTo("/login", forceLoad: true);
+        Nav.NavigateTo("/");
     }
 
     private static string GetInitial(string name)

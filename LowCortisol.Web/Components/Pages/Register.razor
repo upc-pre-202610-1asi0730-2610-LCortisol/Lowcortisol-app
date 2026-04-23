@@ -57,7 +57,7 @@
             @I18n["auth.createAccount"]
         </button>
 
-        <a class="auth-link" href="/login">@I18n["auth.backToLogin"]</a>
+        <a class="auth-link" href="/">@I18n["auth.backToLogin"]</a>
     </div>
 </div>
 
@@ -99,6 +99,6 @@
             return;
         }
 
-        Nav.NavigateTo("/home", forceLoad: true);
+        Nav.NavigateTo("/home");
     }
 }

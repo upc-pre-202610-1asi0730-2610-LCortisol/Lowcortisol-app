@@ -1,5 +1,6 @@
-﻿@page "/login"
+﻿@page "/"
 @rendermode InteractiveServer
+@implements IDisposable
 
 @inject LowCortisol.Web.Auth.AuthService Auth
 @inject NavigationManager Nav
@@ -44,6 +45,11 @@
     private string error = "";
     private bool _checkedAuth = false;
 
+    protected override void OnInitialized()
+    {
+        I18n.OnChange += Refresh;
+    }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (!firstRender || _checkedAuth)
@@ -54,7 +60,7 @@
         var isAuthenticated = await Auth.IsAuthenticatedAsync();
         if (isAuthenticated)
         {
-            Nav.NavigateTo("/", forceLoad: true);
+            Nav.NavigateTo("/home");
             return;
         }
 
@@ -73,6 +79,16 @@
             return;
         }
 
-        Nav.NavigateTo("/home", forceLoad: true);
+        Nav.NavigateTo("/home");
+    }
+
+    private void Refresh()
+    {
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        I18n.OnChange -= Refresh;
     }
 }

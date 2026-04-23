@@ -67,7 +67,7 @@
     private bool IsPublicPage()
     {
         var path = new Uri(Nav.Uri).AbsolutePath.ToLowerInvariant();
-        return path == "/login" || path == "/register";
+        return path == "/" || path == "/register";
     }
     
     protected override async Task OnInitializedAsync()
