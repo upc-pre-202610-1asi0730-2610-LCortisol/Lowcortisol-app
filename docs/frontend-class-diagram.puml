@@ -1,0 +1,100 @@
+﻿@startuml
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam shadowing false
+
+title LowCortisol - Diagrama de clases Frontend
+
+package "LowCortisol.Web.Components.Layout" {
+    class MainLayout <<Razor Component>> {
+        -selectedLang : string
+        -_langVersion : int
+        -_checkedAuth : bool
+        +SwitchLanguage(lang : string)
+        +IsActive(route : string) : string
+    }
+}
+
+package "LowCortisol.Web.Components.Common" {
+    class CircularRing <<Razor Component>> {
+    }
+}
+
+package "LowCortisol.Web.Components.Pages" {
+    class Home <<Razor Component>>
+    class Alerts <<Razor Component>>
+    class Devices <<Razor Component>>
+    class Valves <<Razor Component>>
+    class Reports <<Razor Component>>
+    class Profile <<Razor Component>>
+    class Login <<Razor Component>>
+    class Register <<Razor Component>>
+}
+
+package "LowCortisol.Web.Services" {
+    class AppStateService <<Service>> {
+        +Devices
+        +Valves
+        +Reports
+        +ToggleDevice(id : string)
+        +OnChange
+    }
+
+    class I18nService <<Service>> {
+        +CurrentLanguage : string
+        +InitializeAsync(lang : string)
+        +SetLanguageAsync(lang : string)
+        +OnChange
+    }
+}
+
+package "LowCortisol.Web.Auth" {
+    class AuthService <<Service>> {
+        +RegisterAsync(name, email, phone, password, accountType)
+        +LoginAsync(email, password)
+        +LogoutAsync()
+        +GetCurrentUserAsync()
+        +IsAuthenticatedAsync() : bool
+    }
+
+    class AppUser {
+        +Id : int
+        +Name : string
+        +Email : string
+        +Phone : string
+        +AccountType : string
+    }
+}
+
+' Relaciones del layout
+MainLayout ..> I18nService
+MainLayout ..> AuthService
+
+' Relaciones principales de páginas con servicios
+Home ..> AppStateService
+Home ..> I18nService
+Home ..> CircularRing
+
+Alerts ..> AppStateService
+Alerts ..> I18nService
+
+Devices ..> AppStateService
+Devices ..> I18nService
+
+Valves ..> AppStateService
+Valves ..> I18nService
+
+Reports ..> AppStateService
+Reports ..> I18nService
+
+Profile ..> I18nService
+Profile ..> AuthService
+Profile ..> AppUser
+
+Login ..> AuthService
+Login ..> I18nService
+
+Register ..> AuthService
+Register ..> I18nService
+
+@enduml
