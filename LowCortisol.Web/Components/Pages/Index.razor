@@ -24,5 +24,7 @@
             Nav.NavigateTo("/home", forceLoad: true);
         else
             Nav.NavigateTo("/login", forceLoad: true);
+
+        await InvokeAsync(StateHasChanged);
     }
 }

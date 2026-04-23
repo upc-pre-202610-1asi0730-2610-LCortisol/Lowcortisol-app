@@ -63,7 +63,6 @@
 @code {
     private int _langVersion = 0;
     private string selectedLang = "es";
-    private bool _checkedAuth = false;
     
     private bool IsPublicPage()
     {
@@ -76,29 +75,6 @@
         I18n.OnChange += RefreshLayout;
         await I18n.InitializeAsync("es");
         selectedLang = I18n.CurrentLanguage;
-    }
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (!firstRender || _checkedAuth)
-            return;
-
-        _checkedAuth = true;
-
-        var path = new Uri(Nav.Uri).AbsolutePath.ToLowerInvariant();
-        var isPublicPage = path == "/login" || path == "/register";
-
-        if (!isPublicPage)
-        {
-            var isAuthenticated = await Auth.IsAuthenticatedAsync();
-            if (!isAuthenticated)
-            {
-                Nav.NavigateTo("/login", forceLoad: true);
-                return;
-            }
-        }
-
-        await InvokeAsync(StateHasChanged);
     }
 
     private async Task SwitchToEs() => await SwitchLanguage("es");
