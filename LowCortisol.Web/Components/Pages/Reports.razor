@@ -1,8 +1,7 @@
 ﻿@page "/reports"
-@rendermode InteractiveServer
-@implements IDisposable
 @using LowCortisol.Application.Services
 @using LowCortisol.Domain.Entities
+@using System.Globalization
 @inject DeviceService DeviceService
 @inject LowCortisol.Web.Services.I18nService I18n
 
@@ -35,67 +34,112 @@
         </div>
 
         <div class="soft-card p-5">
-            <div class="flex items-center justify-between mb-6">
-                <h2 class="text-xl font-bold">@I18n["reports.consumption"]</h2>
+    <div class="reports-header">
+        <h2 class="reports-title">@I18n["reports.consumption"]</h2>
 
-                <div class="bg-gray-100 rounded-full p-1 flex">
-                    @foreach (var p in new[] { "7D", "30D", "90D" })
-                    {
-                        <button type="button"
-                                class="px-4 py-2 text-sm font-bold rounded-full transition @(selectedPeriod == p ? "bg-white shadow text-black" : "text-gray-500")"
-                                @onclick="() => LoadData(p)">
-                            @p
-                        </button>
-                    }
-                </div>
-            </div>
-
-            <svg viewBox="0 0 360 170" class="w-full h-56 overflow-visible">
-                @for (int i = 0; i < chartData.Count; i++)
-                {
-                    var item = chartData[i];
-                    var x = i * (360.0 / chartData.Count) + 4;
-                    var barWidth = (360.0 / chartData.Count) - 6;
-                    var waterHeight = item.Water;
-                    var gasHeight = item.Gas;
-
-                    <rect class="chart-bar"
-                          x="@x"
-                          y="@(145 - waterHeight)"
-                          width="@barWidth"
-                          height="@waterHeight"
-                          rx="4"
-                          fill="#1b84f4" />
-
-                    <rect class="chart-bar"
-                          x="@x"
-                          y="@(145 - waterHeight - gasHeight)"
-                          width="@barWidth"
-                          height="@gasHeight"
-                          rx="4"
-                          fill="#ff6a13" />
-                }
-            </svg>
+        <div class="reports-periods">
+            @foreach (var p in new[] { "7D", "30D", "90D" })
+            {
+                <button type="button"
+                        class="reports-period-btn @(selectedPeriod == p ? "active" : "")"
+                        @onclick="() => LoadData(p)">
+                    @p
+                </button>
+            }
         </div>
+    </div>
 
-        <button class="secondary-btn">
-            🗓 @I18n["reports.filter"]
-        </button>
+    <div class="chart-wrap">
+        <svg viewBox="0 0 360 210" class="w-full h-72 overflow-visible">
+            <!-- Eje Y -->
+            <line x1="36" y1="20" x2="36" y2="170" stroke="#dbe2ea" stroke-width="2" />
 
-        <button class="primary-btn">
-            ⬇ @I18n["reports.export"]
-        </button>
+            <!-- Eje X -->
+            <line x1="36" y1="170" x2="336" y2="170" stroke="#dbe2ea" stroke-width="2" />
+
+            <!-- Guías horizontales -->
+            @foreach (var guide in new[] { 50, 80, 110, 140 })
+            {
+                <line x1="36"
+                      y1="@Svg(guide)"
+                      x2="336"
+                      y2="@Svg(guide)"
+                      stroke="#eef2f7"
+                      stroke-width="1" />
+            }
+
+            <!-- Etiquetas eje Y -->
+            <text x="18" y="25" font-size="9" fill="#98a2b3">140</text>
+            <text x="18" y="55" font-size="9" fill="#98a2b3">110</text>
+            <text x="18" y="85" font-size="9" fill="#98a2b3">80</text>
+            <text x="18" y="115" font-size="9" fill="#98a2b3">50</text>
+            <text x="22" y="174" font-size="9" fill="#98a2b3">0</text>
+
+            @for (int i = 0; i < chartData.Count; i++)
+            {
+                var item = chartData[i];
+
+                var slotWidth = 300.0 / chartData.Count;
+                var x = 44 + i * slotWidth;
+                var barWidth = Math.Max(10, slotWidth - 4);
+
+                var waterHeight = item.Water;
+                var gasHeight = item.Gas;
+
+                var waterY = 170 - waterHeight;
+                var gasY = 170 - waterHeight - gasHeight;
+
+                <rect class="chart-bar"
+                      x="@Svg(x)"
+                      y="@Svg(waterY)"
+                      width="@Svg(barWidth)"
+                      height="@Svg(waterHeight)"
+                      rx="4"
+                      fill="#1b84f4" />
+
+                <rect class="chart-bar"
+                      x="@Svg(x)"
+                      y="@Svg(gasY)"
+                      width="@Svg(barWidth)"
+                      height="@Svg(gasHeight)"
+                      rx="4"
+                      fill="#ff6a13" />
+
+                <text> x="@Svg(x + barWidth / 2)"
+                      y="190"
+                      text-anchor="middle"
+                      font-size="9"
+                      fill="#667085">
+                    @item.Label
+                </text>
+            }
+        </svg>
+    </div>
+</div>
+
+        <div class="grid grid-cols-2 gap-3">
+            <button class="secondary-btn">
+                🗓 @I18n["reports.filter"]
+            </button>
+
+            <button class="primary-btn">
+                ⬇ @I18n["reports.export"]
+            </button>
+        </div>
     }
 </div>
 
 @code {
     private Report? report;
     private string selectedPeriod = "30D";
-    private List<ChartBarVm> chartData = new();
+    private List<ChartPointVm> chartData = new();
 
+    private static string Svg(double value)
+    {
+        return value.ToString("0.##", CultureInfo.InvariantCulture);
+    }
     protected override async Task OnInitializedAsync()
     {
-        I18n.OnChange += Refresh;
         await LoadData("30D");
     }
 
@@ -108,21 +152,29 @@
         {
             "7D" => new()
             {
-                new(48, 14), new(60, 12), new(42, 10), new(74, 16), new(68, 13), new(57, 15), new(65, 12)
+                new("D1", 1, 52, 14),
+                new("D2", 2, 56, 15),
+                new("D3", 3, 62, 16),
+                new("D4", 4, 44, 11),
+                new("D5", 5, 53, 14),
+                new("D6", 6, 60, 17),
+                new("D7", 7, 58, 15)
             },
-            "90D" => GenerateBars(20, 38, 78, 8, 20),
-            _ => GenerateBars(15, 42, 82, 10, 22)
+            "90D" => GeneratePoints(18, 42, 78, 8, 20, "P"),
+            _ => GeneratePoints(15, 42, 82, 10, 22, "D")
         };
     }
 
-    private List<ChartBarVm> GenerateBars(int count, int minWater, int maxWater, int minGas, int maxGas)
+    private List<ChartPointVm> GeneratePoints(int count, int minWater, int maxWater, int minGas, int maxGas, string prefix)
     {
         var rng = new Random(42 + count);
-        var list = new List<ChartBarVm>();
+        var list = new List<ChartPointVm>();
 
         for (int i = 0; i < count; i++)
         {
-            list.Add(new ChartBarVm(
+            list.Add(new ChartPointVm(
+                $"{prefix}{i + 1}",
+                i + 1,
                 rng.Next(minWater, maxWater),
                 rng.Next(minGas, maxGas)
             ));
@@ -131,12 +183,5 @@
         return list;
     }
 
-    private void Refresh() => InvokeAsync(StateHasChanged);
-
-    public void Dispose()
-    {
-        I18n.OnChange -= Refresh;
-    }
-
-    public record ChartBarVm(int Water, int Gas);
+    public record ChartPointVm(string Label, int X, int Water, int Gas);
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0MbaazrI7rNt8P4oExf0M4SGzGLsuezwcE5kXBZFlgA=",
+  "Hash": "3Y3v7x+14St+Lv1XMo1cwGuTSnY4oVfR13tHj8CyTBE=",
   "Source": "LowCortisol.Web",
   "BasePath": "_content/LowCortisol.Web",
   "Mode": "Default",
@@ -16,27 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\0de801ubdg-grve1ww7m3.gz",
-      "SourceId": "LowCortisol.Web",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\",
-      "BasePath": "_content/LowCortisol.Web",
-      "RelativePath": "LowCortisol.Web#[.{fingerprint=grve1ww7m3}]!.bundle.scp.css.gz",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\LowCortisol.Web.bundle.scp.css",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "Fingerprint": "xsnff4abn6",
-      "Integrity": "QYVojfIvQeRMobnXiteuTjgDewaP1kwLvD45TXl0DgI=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\LowCortisol.Web.bundle.scp.css"
-    },
     {
       "Identity": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\0pxk3l4n2z-h1s4sie4z3.gz",
       "SourceId": "LowCortisol.Web",
@@ -290,12 +269,12 @@
       "OriginalItemSpec": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\agdk857eqt-kinao4iq90.gz",
+      "Identity": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\agdk857eqt-vvmskmc0g4.gz",
       "SourceId": "LowCortisol.Web",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/LowCortisol.Web",
-      "RelativePath": "i18n/pt#[.{fingerprint=kinao4iq90}]?.json.gz",
+      "RelativePath": "i18n/pt#[.{fingerprint=vvmskmc0g4}]?.json.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -304,8 +283,8 @@
       "RelatedAsset": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\i18n\\pt.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "p3clmjc682",
-      "Integrity": "e42YvtTvSBvaprV1VIYv+vNPk8N5dqAwxIHKrY9hg6Y=",
+      "Fingerprint": "0kn0435221",
+      "Integrity": "wEiLtTgqknK4WqFKo6C/YKoqMUrphctXCvcRbZMSUnE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\i18n\\pt.json"
@@ -332,12 +311,12 @@
       "OriginalItemSpec": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\b5lxal9l5m-1onmbojt2q.gz",
+      "Identity": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\b5lxal9l5m-jy02xapl4e.gz",
       "SourceId": "LowCortisol.Web",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/LowCortisol.Web",
-      "RelativePath": "i18n/es#[.{fingerprint=1onmbojt2q}]?.json.gz",
+      "RelativePath": "i18n/es#[.{fingerprint=jy02xapl4e}]?.json.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -346,8 +325,8 @@
       "RelatedAsset": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\i18n\\es.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "6zwxcf3tqk",
-      "Integrity": "Mr3voVXFZz8Fiu1kgMvhW+mtv5buOs2JXgvmZjUqgL8=",
+      "Fingerprint": "sqshp9sgkq",
+      "Integrity": "xOjyfgUJ+wY+AkJKpm1mdKm/FcJf5cpAfT1R7s3S7aM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\i18n\\es.json"
@@ -395,12 +374,12 @@
       "OriginalItemSpec": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\cmxmvbjnvi-tphupu1eg2.gz",
+      "Identity": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\cmxmvbjnvi-sw9dtj0txx.gz",
       "SourceId": "LowCortisol.Web",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/LowCortisol.Web",
-      "RelativePath": "i18n/en#[.{fingerprint=tphupu1eg2}]?.json.gz",
+      "RelativePath": "i18n/en#[.{fingerprint=sw9dtj0txx}]?.json.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -409,8 +388,8 @@
       "RelatedAsset": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\i18n\\en.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ztlhmtvzct",
-      "Integrity": "x6JaC5z/iqV0+rg4L2O2e1a/98RlkgHNX0Q5ua9nzbA=",
+      "Fingerprint": "gnblvogbat",
+      "Integrity": "xDI7FT30hoLRcJnYllE5L5u2ovwoWmGjIxTpVVZWOF8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\i18n\\en.json"
@@ -626,12 +605,12 @@
       "OriginalItemSpec": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\npkql323fo-9bnjzohkmc.gz",
+      "Identity": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\npkql323fo-wr7ez1ac3g.gz",
       "SourceId": "LowCortisol.Web",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/LowCortisol.Web",
-      "RelativePath": "app#[.{fingerprint=9bnjzohkmc}]?.css.gz",
+      "RelativePath": "app#[.{fingerprint=wr7ez1ac3g}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -640,8 +619,8 @@
       "RelatedAsset": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\app.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "9v2p33vev3",
-      "Integrity": "xRk0b3KZvmRjOfaDtQuZs4FxnINK9LuuODLgPOOIcMc=",
+      "Fingerprint": "gj6y17rbsj",
+      "Integrity": "ZB3o2ud/DffGojUPg0sxi4BlHN64UvORzO9Q8dEUpho=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\app.css"
@@ -813,27 +792,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
-    },
-    {
-      "Identity": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\resktzysiq-grve1ww7m3.gz",
-      "SourceId": "LowCortisol.Web",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\",
-      "BasePath": "_content/LowCortisol.Web",
-      "RelativePath": "LowCortisol.Web#[.{fingerprint=grve1ww7m3}]?.styles.css.gz",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\LowCortisol.Web.styles.css",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "Fingerprint": "xsnff4abn6",
-      "Integrity": "QYVojfIvQeRMobnXiteuTjgDewaP1kwLvD45TXl0DgI=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\LowCortisol.Web.styles.css"
     },
     {
       "Identity": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\rr6c3gpozf-3lmsmvssee.gz",
@@ -1109,48 +1067,6 @@
       "OriginalItemSpec": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\LowCortisol.Web.styles.css",
-      "SourceId": "LowCortisol.Web",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/LowCortisol.Web",
-      "RelativePath": "LowCortisol.Web#[.{fingerprint}]?.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "grve1ww7m3",
-      "Integrity": "tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\LowCortisol.Web.styles.css"
-    },
-    {
-      "Identity": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\LowCortisol.Web.bundle.scp.css",
-      "SourceId": "LowCortisol.Web",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/LowCortisol.Web",
-      "RelativePath": "LowCortisol.Web#[.{fingerprint}]!.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "grve1ww7m3",
-      "Integrity": "tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\LowCortisol.Web.bundle.scp.css"
-    },
-    {
       "Identity": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\app.css",
       "SourceId": "LowCortisol.Web",
       "SourceType": "Discovered",
@@ -1165,8 +1081,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9bnjzohkmc",
-      "Integrity": "O5CegKdBOhaO08NfswiTM7jaKgm0CRFYHLXH0xpr8Zg=",
+      "Fingerprint": "wr7ez1ac3g",
+      "Integrity": "3GV6wb1Vh0I0nSIowZxUZ+IQTFSM+eZhttS3vHtfiwQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\app.css"
@@ -1207,8 +1123,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "tphupu1eg2",
-      "Integrity": "MTYE+EGrN18gQ1qOElozIubVBDPj1S6LAtdSxt/lzwM=",
+      "Fingerprint": "sw9dtj0txx",
+      "Integrity": "bBztAYJTC85DbCZo8N6q7cw6FONLG4DOYbZUvjZ0nNI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\i18n\\en.json"
@@ -1228,8 +1144,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1onmbojt2q",
-      "Integrity": "ryPxI6/VpheSBEFnYgc+xfOi7ZpUQGAzEcGD1E6xS3U=",
+      "Fingerprint": "jy02xapl4e",
+      "Integrity": "W2rpDxrwV0cvCRY64bLSRIARGTAnle5pXYAIJPH9e5k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\i18n\\es.json"
@@ -1270,8 +1186,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "kinao4iq90",
-      "Integrity": "dCLsKzYTqNTC0PHSLMbkgziI5Ju12mHcUQBetCnGgh0=",
+      "Fingerprint": "vvmskmc0g4",
+      "Integrity": "284DWjgd7UAbVXl1BL2xqtQY7Iaqfc+5uohsb/omMTs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\i18n\\pt.json"
@@ -2224,13 +2140,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "app.9bnjzohkmc.css",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\npkql323fo-9bnjzohkmc.gz",
+      "Route": "app.css",
+      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\npkql323fo-wr7ez1ac3g.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000343406593"
+          "Quality": "0.000207986689"
         }
       ],
       "ResponseHeaders": [
@@ -2240,19 +2156,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2911"
+          "Value": "4807"
         },
         {
           "Name": "ETag",
-          "Value": "\"xRk0b3KZvmRjOfaDtQuZs4FxnINK9LuuODLgPOOIcMc=\""
+          "Value": "\"ZB3o2ud/DffGojUPg0sxi4BlHN64UvORzO9Q8dEUpho=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:27:18 GMT"
+          "Value": "Thu, 23 Apr 2026 00:22:51 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -2268,26 +2184,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"O5CegKdBOhaO08NfswiTM7jaKgm0CRFYHLXH0xpr8Zg=\""
+          "Value": "W/\"3GV6wb1Vh0I0nSIowZxUZ+IQTFSM+eZhttS3vHtfiwQ=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "9bnjzohkmc"
-        },
-        {
-          "Name": "label",
-          "Value": "app.css"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-O5CegKdBOhaO08NfswiTM7jaKgm0CRFYHLXH0xpr8Zg="
+          "Value": "sha256-3GV6wb1Vh0I0nSIowZxUZ+IQTFSM+eZhttS3vHtfiwQ="
         }
       ]
     },
     {
-      "Route": "app.9bnjzohkmc.css",
+      "Route": "app.css",
       "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2297,7 +2205,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14224"
+          "Value": "27786"
         },
         {
           "Name": "Content-Type",
@@ -2305,11 +2213,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"O5CegKdBOhaO08NfswiTM7jaKgm0CRFYHLXH0xpr8Zg=\""
+          "Value": "\"3GV6wb1Vh0I0nSIowZxUZ+IQTFSM+eZhttS3vHtfiwQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:27:18 GMT"
+          "Value": "Thu, 23 Apr 2026 00:22:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3GV6wb1Vh0I0nSIowZxUZ+IQTFSM+eZhttS3vHtfiwQ="
+        }
+      ]
+    },
+    {
+      "Route": "app.css.gz",
+      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\npkql323fo-wr7ez1ac3g.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4807"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZB3o2ud/DffGojUPg0sxi4BlHN64UvORzO9Q8dEUpho=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 23 Apr 2026 00:22:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZB3o2ud/DffGojUPg0sxi4BlHN64UvORzO9Q8dEUpho="
+        }
+      ]
+    },
+    {
+      "Route": "app.wr7ez1ac3g.css",
+      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\npkql323fo-wr7ez1ac3g.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000207986689"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4807"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZB3o2ud/DffGojUPg0sxi4BlHN64UvORzO9Q8dEUpho=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 23 Apr 2026 00:22:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"3GV6wb1Vh0I0nSIowZxUZ+IQTFSM+eZhttS3vHtfiwQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wr7ez1ac3g"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3GV6wb1Vh0I0nSIowZxUZ+IQTFSM+eZhttS3vHtfiwQ="
+        }
+      ]
+    },
+    {
+      "Route": "app.wr7ez1ac3g.css",
+      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27786"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3GV6wb1Vh0I0nSIowZxUZ+IQTFSM+eZhttS3vHtfiwQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 23 Apr 2026 00:22:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2319,7 +2372,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "9bnjzohkmc"
+          "Value": "wr7ez1ac3g"
         },
         {
           "Name": "label",
@@ -2327,13 +2380,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-O5CegKdBOhaO08NfswiTM7jaKgm0CRFYHLXH0xpr8Zg="
+          "Value": "sha256-3GV6wb1Vh0I0nSIowZxUZ+IQTFSM+eZhttS3vHtfiwQ="
         }
       ]
     },
     {
-      "Route": "app.9bnjzohkmc.css.gz",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\npkql323fo-9bnjzohkmc.gz",
+      "Route": "app.wr7ez1ac3g.css.gz",
+      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\npkql323fo-wr7ez1ac3g.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2342,7 +2395,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2911"
+          "Value": "4807"
         },
         {
           "Name": "Content-Type",
@@ -2350,11 +2403,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xRk0b3KZvmRjOfaDtQuZs4FxnINK9LuuODLgPOOIcMc=\""
+          "Value": "\"ZB3o2ud/DffGojUPg0sxi4BlHN64UvORzO9Q8dEUpho=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:27:18 GMT"
+          "Value": "Thu, 23 Apr 2026 00:22:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2372,7 +2425,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "9bnjzohkmc"
+          "Value": "wr7ez1ac3g"
         },
         {
           "Name": "label",
@@ -2380,144 +2433,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-xRk0b3KZvmRjOfaDtQuZs4FxnINK9LuuODLgPOOIcMc="
-        }
-      ]
-    },
-    {
-      "Route": "app.css",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\npkql323fo-9bnjzohkmc.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000343406593"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2911"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"xRk0b3KZvmRjOfaDtQuZs4FxnINK9LuuODLgPOOIcMc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:27:18 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"O5CegKdBOhaO08NfswiTM7jaKgm0CRFYHLXH0xpr8Zg=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-O5CegKdBOhaO08NfswiTM7jaKgm0CRFYHLXH0xpr8Zg="
-        }
-      ]
-    },
-    {
-      "Route": "app.css",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\app.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "14224"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"O5CegKdBOhaO08NfswiTM7jaKgm0CRFYHLXH0xpr8Zg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:27:18 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-O5CegKdBOhaO08NfswiTM7jaKgm0CRFYHLXH0xpr8Zg="
-        }
-      ]
-    },
-    {
-      "Route": "app.css.gz",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\npkql323fo-9bnjzohkmc.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2911"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"xRk0b3KZvmRjOfaDtQuZs4FxnINK9LuuODLgPOOIcMc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:27:18 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-xRk0b3KZvmRjOfaDtQuZs4FxnINK9LuuODLgPOOIcMc="
+          "Value": "sha256-ZB3o2ud/DffGojUPg0sxi4BlHN64UvORzO9Q8dEUpho="
         }
       ]
     },
@@ -2605,12 +2521,12 @@
     },
     {
       "Route": "i18n/en.json",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\cmxmvbjnvi-tphupu1eg2.gz",
+      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\cmxmvbjnvi-sw9dtj0txx.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000903342367"
+          "Quality": "0.000734753857"
         }
       ],
       "ResponseHeaders": [
@@ -2620,15 +2536,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1106"
+          "Value": "1360"
         },
         {
           "Name": "ETag",
-          "Value": "\"x6JaC5z/iqV0+rg4L2O2e1a/98RlkgHNX0Q5ua9nzbA=\""
+          "Value": "\"xDI7FT30hoLRcJnYllE5L5u2ovwoWmGjIxTpVVZWOF8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:12:54 GMT"
+          "Value": "Thu, 23 Apr 2026 00:49:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2648,13 +2564,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"MTYE+EGrN18gQ1qOElozIubVBDPj1S6LAtdSxt/lzwM=\""
+          "Value": "W/\"bBztAYJTC85DbCZo8N6q7cw6FONLG4DOYbZUvjZ0nNI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-MTYE+EGrN18gQ1qOElozIubVBDPj1S6LAtdSxt/lzwM="
+          "Value": "sha256-bBztAYJTC85DbCZo8N6q7cw6FONLG4DOYbZUvjZ0nNI="
         }
       ]
     },
@@ -2669,7 +2585,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2925"
+          "Value": "3721"
         },
         {
           "Name": "Content-Type",
@@ -2677,11 +2593,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"MTYE+EGrN18gQ1qOElozIubVBDPj1S6LAtdSxt/lzwM=\""
+          "Value": "\"bBztAYJTC85DbCZo8N6q7cw6FONLG4DOYbZUvjZ0nNI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:12:54 GMT"
+          "Value": "Thu, 23 Apr 2026 00:49:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2691,13 +2607,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-MTYE+EGrN18gQ1qOElozIubVBDPj1S6LAtdSxt/lzwM="
+          "Value": "sha256-bBztAYJTC85DbCZo8N6q7cw6FONLG4DOYbZUvjZ0nNI="
         }
       ]
     },
     {
       "Route": "i18n/en.json.gz",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\cmxmvbjnvi-tphupu1eg2.gz",
+      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\cmxmvbjnvi-sw9dtj0txx.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2706,7 +2622,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1106"
+          "Value": "1360"
         },
         {
           "Name": "Content-Type",
@@ -2714,11 +2630,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"x6JaC5z/iqV0+rg4L2O2e1a/98RlkgHNX0Q5ua9nzbA=\""
+          "Value": "\"xDI7FT30hoLRcJnYllE5L5u2ovwoWmGjIxTpVVZWOF8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:12:54 GMT"
+          "Value": "Thu, 23 Apr 2026 00:49:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2736,18 +2652,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-x6JaC5z/iqV0+rg4L2O2e1a/98RlkgHNX0Q5ua9nzbA="
+          "Value": "sha256-xDI7FT30hoLRcJnYllE5L5u2ovwoWmGjIxTpVVZWOF8="
         }
       ]
     },
     {
-      "Route": "i18n/en.tphupu1eg2.json",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\cmxmvbjnvi-tphupu1eg2.gz",
+      "Route": "i18n/en.sw9dtj0txx.json",
+      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\cmxmvbjnvi-sw9dtj0txx.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000903342367"
+          "Quality": "0.000734753857"
         }
       ],
       "ResponseHeaders": [
@@ -2757,15 +2673,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1106"
+          "Value": "1360"
         },
         {
           "Name": "ETag",
-          "Value": "\"x6JaC5z/iqV0+rg4L2O2e1a/98RlkgHNX0Q5ua9nzbA=\""
+          "Value": "\"xDI7FT30hoLRcJnYllE5L5u2ovwoWmGjIxTpVVZWOF8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:12:54 GMT"
+          "Value": "Thu, 23 Apr 2026 00:49:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2785,13 +2701,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"MTYE+EGrN18gQ1qOElozIubVBDPj1S6LAtdSxt/lzwM=\""
+          "Value": "W/\"bBztAYJTC85DbCZo8N6q7cw6FONLG4DOYbZUvjZ0nNI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tphupu1eg2"
+          "Value": "sw9dtj0txx"
         },
         {
           "Name": "label",
@@ -2799,12 +2715,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-MTYE+EGrN18gQ1qOElozIubVBDPj1S6LAtdSxt/lzwM="
+          "Value": "sha256-bBztAYJTC85DbCZo8N6q7cw6FONLG4DOYbZUvjZ0nNI="
         }
       ]
     },
     {
-      "Route": "i18n/en.tphupu1eg2.json",
+      "Route": "i18n/en.sw9dtj0txx.json",
       "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\i18n\\en.json",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2814,7 +2730,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2925"
+          "Value": "3721"
         },
         {
           "Name": "Content-Type",
@@ -2822,11 +2738,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"MTYE+EGrN18gQ1qOElozIubVBDPj1S6LAtdSxt/lzwM=\""
+          "Value": "\"bBztAYJTC85DbCZo8N6q7cw6FONLG4DOYbZUvjZ0nNI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:12:54 GMT"
+          "Value": "Thu, 23 Apr 2026 00:49:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2836,7 +2752,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tphupu1eg2"
+          "Value": "sw9dtj0txx"
         },
         {
           "Name": "label",
@@ -2844,13 +2760,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-MTYE+EGrN18gQ1qOElozIubVBDPj1S6LAtdSxt/lzwM="
+          "Value": "sha256-bBztAYJTC85DbCZo8N6q7cw6FONLG4DOYbZUvjZ0nNI="
         }
       ]
     },
     {
-      "Route": "i18n/en.tphupu1eg2.json.gz",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\cmxmvbjnvi-tphupu1eg2.gz",
+      "Route": "i18n/en.sw9dtj0txx.json.gz",
+      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\cmxmvbjnvi-sw9dtj0txx.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2859,7 +2775,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1106"
+          "Value": "1360"
         },
         {
           "Name": "Content-Type",
@@ -2867,11 +2783,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"x6JaC5z/iqV0+rg4L2O2e1a/98RlkgHNX0Q5ua9nzbA=\""
+          "Value": "\"xDI7FT30hoLRcJnYllE5L5u2ovwoWmGjIxTpVVZWOF8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:12:54 GMT"
+          "Value": "Thu, 23 Apr 2026 00:49:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2889,7 +2805,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tphupu1eg2"
+          "Value": "sw9dtj0txx"
         },
         {
           "Name": "label",
@@ -2897,18 +2813,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-x6JaC5z/iqV0+rg4L2O2e1a/98RlkgHNX0Q5ua9nzbA="
+          "Value": "sha256-xDI7FT30hoLRcJnYllE5L5u2ovwoWmGjIxTpVVZWOF8="
         }
       ]
     },
     {
-      "Route": "i18n/es.1onmbojt2q.json",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\b5lxal9l5m-1onmbojt2q.gz",
+      "Route": "i18n/es.json",
+      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\b5lxal9l5m-jy02xapl4e.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000786782061"
+          "Quality": "0.000639386189"
         }
       ],
       "ResponseHeaders": [
@@ -2918,19 +2834,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1270"
+          "Value": "1563"
         },
         {
           "Name": "ETag",
-          "Value": "\"Mr3voVXFZz8Fiu1kgMvhW+mtv5buOs2JXgvmZjUqgL8=\""
+          "Value": "\"xOjyfgUJ+wY+AkJKpm1mdKm/FcJf5cpAfT1R7s3S7aM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:12:48 GMT"
+          "Value": "Thu, 23 Apr 2026 00:49:21 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -2946,26 +2862,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"ryPxI6/VpheSBEFnYgc+xfOi7ZpUQGAzEcGD1E6xS3U=\""
+          "Value": "W/\"W2rpDxrwV0cvCRY64bLSRIARGTAnle5pXYAIJPH9e5k=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "1onmbojt2q"
-        },
-        {
-          "Name": "label",
-          "Value": "i18n/es.json"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-ryPxI6/VpheSBEFnYgc+xfOi7ZpUQGAzEcGD1E6xS3U="
+          "Value": "sha256-W2rpDxrwV0cvCRY64bLSRIARGTAnle5pXYAIJPH9e5k="
         }
       ]
     },
     {
-      "Route": "i18n/es.1onmbojt2q.json",
+      "Route": "i18n/es.json",
       "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\i18n\\es.json",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2975,7 +2883,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3204"
+          "Value": "4056"
         },
         {
           "Name": "Content-Type",
@@ -2983,11 +2891,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ryPxI6/VpheSBEFnYgc+xfOi7ZpUQGAzEcGD1E6xS3U=\""
+          "Value": "\"W2rpDxrwV0cvCRY64bLSRIARGTAnle5pXYAIJPH9e5k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:12:48 GMT"
+          "Value": "Thu, 23 Apr 2026 00:49:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-W2rpDxrwV0cvCRY64bLSRIARGTAnle5pXYAIJPH9e5k="
+        }
+      ]
+    },
+    {
+      "Route": "i18n/es.json.gz",
+      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\b5lxal9l5m-jy02xapl4e.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1563"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xOjyfgUJ+wY+AkJKpm1mdKm/FcJf5cpAfT1R7s3S7aM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 23 Apr 2026 00:49:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xOjyfgUJ+wY+AkJKpm1mdKm/FcJf5cpAfT1R7s3S7aM="
+        }
+      ]
+    },
+    {
+      "Route": "i18n/es.jy02xapl4e.json",
+      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\b5lxal9l5m-jy02xapl4e.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000639386189"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1563"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xOjyfgUJ+wY+AkJKpm1mdKm/FcJf5cpAfT1R7s3S7aM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 23 Apr 2026 00:49:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"W2rpDxrwV0cvCRY64bLSRIARGTAnle5pXYAIJPH9e5k=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jy02xapl4e"
+        },
+        {
+          "Name": "label",
+          "Value": "i18n/es.json"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-W2rpDxrwV0cvCRY64bLSRIARGTAnle5pXYAIJPH9e5k="
+        }
+      ]
+    },
+    {
+      "Route": "i18n/es.jy02xapl4e.json",
+      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\i18n\\es.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4056"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"W2rpDxrwV0cvCRY64bLSRIARGTAnle5pXYAIJPH9e5k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 23 Apr 2026 00:49:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2997,7 +3050,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "1onmbojt2q"
+          "Value": "jy02xapl4e"
         },
         {
           "Name": "label",
@@ -3005,13 +3058,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ryPxI6/VpheSBEFnYgc+xfOi7ZpUQGAzEcGD1E6xS3U="
+          "Value": "sha256-W2rpDxrwV0cvCRY64bLSRIARGTAnle5pXYAIJPH9e5k="
         }
       ]
     },
     {
-      "Route": "i18n/es.1onmbojt2q.json.gz",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\b5lxal9l5m-1onmbojt2q.gz",
+      "Route": "i18n/es.jy02xapl4e.json.gz",
+      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\b5lxal9l5m-jy02xapl4e.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3020,7 +3073,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1270"
+          "Value": "1563"
         },
         {
           "Name": "Content-Type",
@@ -3028,11 +3081,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Mr3voVXFZz8Fiu1kgMvhW+mtv5buOs2JXgvmZjUqgL8=\""
+          "Value": "\"xOjyfgUJ+wY+AkJKpm1mdKm/FcJf5cpAfT1R7s3S7aM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:12:48 GMT"
+          "Value": "Thu, 23 Apr 2026 00:49:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3050,7 +3103,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "1onmbojt2q"
+          "Value": "jy02xapl4e"
         },
         {
           "Name": "label",
@@ -3058,144 +3111,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Mr3voVXFZz8Fiu1kgMvhW+mtv5buOs2JXgvmZjUqgL8="
-        }
-      ]
-    },
-    {
-      "Route": "i18n/es.json",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\b5lxal9l5m-1onmbojt2q.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000786782061"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1270"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Mr3voVXFZz8Fiu1kgMvhW+mtv5buOs2JXgvmZjUqgL8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:12:48 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"ryPxI6/VpheSBEFnYgc+xfOi7ZpUQGAzEcGD1E6xS3U=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ryPxI6/VpheSBEFnYgc+xfOi7ZpUQGAzEcGD1E6xS3U="
-        }
-      ]
-    },
-    {
-      "Route": "i18n/es.json",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\i18n\\es.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3204"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ryPxI6/VpheSBEFnYgc+xfOi7ZpUQGAzEcGD1E6xS3U=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:12:48 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ryPxI6/VpheSBEFnYgc+xfOi7ZpUQGAzEcGD1E6xS3U="
-        }
-      ]
-    },
-    {
-      "Route": "i18n/es.json.gz",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\b5lxal9l5m-1onmbojt2q.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1270"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Mr3voVXFZz8Fiu1kgMvhW+mtv5buOs2JXgvmZjUqgL8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:12:48 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Mr3voVXFZz8Fiu1kgMvhW+mtv5buOs2JXgvmZjUqgL8="
+          "Value": "sha256-xOjyfgUJ+wY+AkJKpm1mdKm/FcJf5cpAfT1R7s3S7aM="
         }
       ]
     },
@@ -3499,12 +3415,12 @@
     },
     {
       "Route": "i18n/pt.json",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\agdk857eqt-kinao4iq90.gz",
+      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\agdk857eqt-vvmskmc0g4.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000784929356"
+          "Quality": "0.000640614990"
         }
       ],
       "ResponseHeaders": [
@@ -3514,15 +3430,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1273"
+          "Value": "1560"
         },
         {
           "Name": "ETag",
-          "Value": "\"e42YvtTvSBvaprV1VIYv+vNPk8N5dqAwxIHKrY9hg6Y=\""
+          "Value": "\"wEiLtTgqknK4WqFKo6C/YKoqMUrphctXCvcRbZMSUnE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:13:02 GMT"
+          "Value": "Thu, 23 Apr 2026 00:49:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3542,13 +3458,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"dCLsKzYTqNTC0PHSLMbkgziI5Ju12mHcUQBetCnGgh0=\""
+          "Value": "W/\"284DWjgd7UAbVXl1BL2xqtQY7Iaqfc+5uohsb/omMTs=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-dCLsKzYTqNTC0PHSLMbkgziI5Ju12mHcUQBetCnGgh0="
+          "Value": "sha256-284DWjgd7UAbVXl1BL2xqtQY7Iaqfc+5uohsb/omMTs="
         }
       ]
     },
@@ -3563,7 +3479,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3213"
+          "Value": "4033"
         },
         {
           "Name": "Content-Type",
@@ -3571,11 +3487,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dCLsKzYTqNTC0PHSLMbkgziI5Ju12mHcUQBetCnGgh0=\""
+          "Value": "\"284DWjgd7UAbVXl1BL2xqtQY7Iaqfc+5uohsb/omMTs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:13:02 GMT"
+          "Value": "Thu, 23 Apr 2026 00:49:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3585,13 +3501,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-dCLsKzYTqNTC0PHSLMbkgziI5Ju12mHcUQBetCnGgh0="
+          "Value": "sha256-284DWjgd7UAbVXl1BL2xqtQY7Iaqfc+5uohsb/omMTs="
         }
       ]
     },
     {
       "Route": "i18n/pt.json.gz",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\agdk857eqt-kinao4iq90.gz",
+      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\agdk857eqt-vvmskmc0g4.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3600,7 +3516,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1273"
+          "Value": "1560"
         },
         {
           "Name": "Content-Type",
@@ -3608,11 +3524,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"e42YvtTvSBvaprV1VIYv+vNPk8N5dqAwxIHKrY9hg6Y=\""
+          "Value": "\"wEiLtTgqknK4WqFKo6C/YKoqMUrphctXCvcRbZMSUnE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:13:02 GMT"
+          "Value": "Thu, 23 Apr 2026 00:49:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3630,18 +3546,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-e42YvtTvSBvaprV1VIYv+vNPk8N5dqAwxIHKrY9hg6Y="
+          "Value": "sha256-wEiLtTgqknK4WqFKo6C/YKoqMUrphctXCvcRbZMSUnE="
         }
       ]
     },
     {
-      "Route": "i18n/pt.kinao4iq90.json",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\agdk857eqt-kinao4iq90.gz",
+      "Route": "i18n/pt.vvmskmc0g4.json",
+      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\agdk857eqt-vvmskmc0g4.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000784929356"
+          "Quality": "0.000640614990"
         }
       ],
       "ResponseHeaders": [
@@ -3651,15 +3567,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1273"
+          "Value": "1560"
         },
         {
           "Name": "ETag",
-          "Value": "\"e42YvtTvSBvaprV1VIYv+vNPk8N5dqAwxIHKrY9hg6Y=\""
+          "Value": "\"wEiLtTgqknK4WqFKo6C/YKoqMUrphctXCvcRbZMSUnE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:13:02 GMT"
+          "Value": "Thu, 23 Apr 2026 00:49:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3679,13 +3595,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"dCLsKzYTqNTC0PHSLMbkgziI5Ju12mHcUQBetCnGgh0=\""
+          "Value": "W/\"284DWjgd7UAbVXl1BL2xqtQY7Iaqfc+5uohsb/omMTs=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "kinao4iq90"
+          "Value": "vvmskmc0g4"
         },
         {
           "Name": "label",
@@ -3693,12 +3609,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-dCLsKzYTqNTC0PHSLMbkgziI5Ju12mHcUQBetCnGgh0="
+          "Value": "sha256-284DWjgd7UAbVXl1BL2xqtQY7Iaqfc+5uohsb/omMTs="
         }
       ]
     },
     {
-      "Route": "i18n/pt.kinao4iq90.json",
+      "Route": "i18n/pt.vvmskmc0g4.json",
       "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\i18n\\pt.json",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3708,7 +3624,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3213"
+          "Value": "4033"
         },
         {
           "Name": "Content-Type",
@@ -3716,11 +3632,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dCLsKzYTqNTC0PHSLMbkgziI5Ju12mHcUQBetCnGgh0=\""
+          "Value": "\"284DWjgd7UAbVXl1BL2xqtQY7Iaqfc+5uohsb/omMTs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:13:02 GMT"
+          "Value": "Thu, 23 Apr 2026 00:49:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3730,7 +3646,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "kinao4iq90"
+          "Value": "vvmskmc0g4"
         },
         {
           "Name": "label",
@@ -3738,13 +3654,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-dCLsKzYTqNTC0PHSLMbkgziI5Ju12mHcUQBetCnGgh0="
+          "Value": "sha256-284DWjgd7UAbVXl1BL2xqtQY7Iaqfc+5uohsb/omMTs="
         }
       ]
     },
     {
-      "Route": "i18n/pt.kinao4iq90.json.gz",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\agdk857eqt-kinao4iq90.gz",
+      "Route": "i18n/pt.vvmskmc0g4.json.gz",
+      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\agdk857eqt-vvmskmc0g4.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3753,7 +3669,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1273"
+          "Value": "1560"
         },
         {
           "Name": "Content-Type",
@@ -3761,11 +3677,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"e42YvtTvSBvaprV1VIYv+vNPk8N5dqAwxIHKrY9hg6Y=\""
+          "Value": "\"wEiLtTgqknK4WqFKo6C/YKoqMUrphctXCvcRbZMSUnE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 22 Apr 2026 06:13:02 GMT"
+          "Value": "Thu, 23 Apr 2026 00:49:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3783,7 +3699,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "kinao4iq90"
+          "Value": "vvmskmc0g4"
         },
         {
           "Name": "label",
@@ -3791,7 +3707,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-e42YvtTvSBvaprV1VIYv+vNPk8N5dqAwxIHKrY9hg6Y="
+          "Value": "sha256-wEiLtTgqknK4WqFKo6C/YKoqMUrphctXCvcRbZMSUnE="
         }
       ]
     },
@@ -17202,602 +17118,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-pf2AOjAOccWBEl9ORfBaaHo0t3lQUfisiqfIeMW9tqI="
-        }
-      ]
-    },
-    {
-      "Route": "LowCortisol.Web.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\0de801ubdg-grve1ww7m3.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.001253132832"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "797"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QYVojfIvQeRMobnXiteuTjgDewaP1kwLvD45TXl0DgI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 21 Apr 2026 23:25:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc="
-        }
-      ]
-    },
-    {
-      "Route": "LowCortisol.Web.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\LowCortisol.Web.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2250"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 21 Apr 2026 23:25:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc="
-        }
-      ]
-    },
-    {
-      "Route": "LowCortisol.Web.bundle.scp.css.gz",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\0de801ubdg-grve1ww7m3.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "797"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QYVojfIvQeRMobnXiteuTjgDewaP1kwLvD45TXl0DgI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 21 Apr 2026 23:25:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-QYVojfIvQeRMobnXiteuTjgDewaP1kwLvD45TXl0DgI="
-        }
-      ]
-    },
-    {
-      "Route": "LowCortisol.Web.grve1ww7m3.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\0de801ubdg-grve1ww7m3.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.001253132832"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "797"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QYVojfIvQeRMobnXiteuTjgDewaP1kwLvD45TXl0DgI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 21 Apr 2026 23:25:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "grve1ww7m3"
-        },
-        {
-          "Name": "label",
-          "Value": "LowCortisol.Web.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc="
-        }
-      ]
-    },
-    {
-      "Route": "LowCortisol.Web.grve1ww7m3.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\LowCortisol.Web.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2250"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 21 Apr 2026 23:25:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "grve1ww7m3"
-        },
-        {
-          "Name": "label",
-          "Value": "LowCortisol.Web.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc="
-        }
-      ]
-    },
-    {
-      "Route": "LowCortisol.Web.grve1ww7m3.bundle.scp.css.gz",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\0de801ubdg-grve1ww7m3.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "797"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QYVojfIvQeRMobnXiteuTjgDewaP1kwLvD45TXl0DgI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 21 Apr 2026 23:25:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "grve1ww7m3"
-        },
-        {
-          "Name": "label",
-          "Value": "LowCortisol.Web.bundle.scp.css.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-QYVojfIvQeRMobnXiteuTjgDewaP1kwLvD45TXl0DgI="
-        }
-      ]
-    },
-    {
-      "Route": "LowCortisol.Web.grve1ww7m3.styles.css",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\resktzysiq-grve1ww7m3.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.001253132832"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "797"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QYVojfIvQeRMobnXiteuTjgDewaP1kwLvD45TXl0DgI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 21 Apr 2026 23:25:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "grve1ww7m3"
-        },
-        {
-          "Name": "label",
-          "Value": "LowCortisol.Web.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc="
-        }
-      ]
-    },
-    {
-      "Route": "LowCortisol.Web.grve1ww7m3.styles.css",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\LowCortisol.Web.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2250"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 21 Apr 2026 23:25:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "grve1ww7m3"
-        },
-        {
-          "Name": "label",
-          "Value": "LowCortisol.Web.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc="
-        }
-      ]
-    },
-    {
-      "Route": "LowCortisol.Web.grve1ww7m3.styles.css.gz",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\resktzysiq-grve1ww7m3.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "797"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QYVojfIvQeRMobnXiteuTjgDewaP1kwLvD45TXl0DgI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 21 Apr 2026 23:25:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "grve1ww7m3"
-        },
-        {
-          "Name": "label",
-          "Value": "LowCortisol.Web.styles.css.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-QYVojfIvQeRMobnXiteuTjgDewaP1kwLvD45TXl0DgI="
-        }
-      ]
-    },
-    {
-      "Route": "LowCortisol.Web.styles.css",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\resktzysiq-grve1ww7m3.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.001253132832"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "797"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QYVojfIvQeRMobnXiteuTjgDewaP1kwLvD45TXl0DgI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 21 Apr 2026 23:25:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc="
-        }
-      ]
-    },
-    {
-      "Route": "LowCortisol.Web.styles.css",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\LowCortisol.Web.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2250"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 21 Apr 2026 23:25:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc="
-        }
-      ]
-    },
-    {
-      "Route": "LowCortisol.Web.styles.css.gz",
-      "AssetFile": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\compressed\\resktzysiq-grve1ww7m3.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "797"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QYVojfIvQeRMobnXiteuTjgDewaP1kwLvD45TXl0DgI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 21 Apr 2026 23:25:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-QYVojfIvQeRMobnXiteuTjgDewaP1kwLvD45TXl0DgI="
         }
       ]
     }

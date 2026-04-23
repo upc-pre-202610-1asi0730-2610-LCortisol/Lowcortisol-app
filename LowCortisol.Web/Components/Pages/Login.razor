@@ -1,0 +1,78 @@
+﻿@page "/login"
+@rendermode InteractiveServer
+
+@inject LowCortisol.Web.Auth.AuthService Auth
+@inject NavigationManager Nav
+@inject LowCortisol.Web.Services.I18nService I18n
+
+<div class="auth-page">
+    <div class="auth-card">
+        <h1 class="auth-title">@I18n["auth.loginTitle"]</h1>
+        <p class="auth-subtitle">@I18n["auth.loginSubtitle"]</p>
+
+        @if (!string.IsNullOrWhiteSpace(error))
+        {
+            <div class="auth-error">@error</div>
+        }
+
+        <div class="auth-field">
+            <label>@I18n["auth.email"]</label>
+            <input class="auth-input"
+                   @bind="email"
+                   placeholder="@I18n["auth.emailPlaceholder"]" />
+        </div>
+
+        <div class="auth-field">
+            <label>@I18n["auth.password"]</label>
+            <input class="auth-input"
+                   type="password"
+                   @bind="password"
+                   placeholder="@I18n["auth.passwordPlaceholder"]" />
+        </div>
+
+        <button class="auth-primary-btn" @onclick="SignInUser">
+            @I18n["auth.signIn"]
+        </button>
+
+        <a class="auth-link" href="/register">@I18n["auth.createAccount"]</a>
+    </div>
+</div>
+
+@code {
+    private string email = "";
+    private string password = "";
+    private string error = "";
+    private bool _checkedAuth = false;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender || _checkedAuth)
+            return;
+
+        _checkedAuth = true;
+
+        var isAuthenticated = await Auth.IsAuthenticatedAsync();
+        if (isAuthenticated)
+        {
+            Nav.NavigateTo("/", forceLoad: true);
+            return;
+        }
+
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async Task SignInUser()
+    {
+        error = "";
+
+        var result = await Auth.LoginAsync(email, password);
+
+        if (!result.Ok)
+        {
+            error = result.Error;
+            return;
+        }
+
+        Nav.NavigateTo("/", forceLoad: true);
+    }
+}

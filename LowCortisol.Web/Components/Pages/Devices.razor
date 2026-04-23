@@ -17,7 +17,7 @@
         @foreach (var item in AppState.Devices)
         {
             <div class="soft-card p-[18px] device-card fade-up @(item.IsOnline ? "" : "device-card-offline")">
-                <div class="flex items-start justify-between gap-2">
+                <div class="flex items-center justify-between gap-2">
                     <div class="flex items-center gap-2">
                         <div class="icon-chip @(item.IsOnline ? "bg-chip-blue" : "bg-chip-gray") text-2xl">
                             @item.Icon
@@ -34,7 +34,7 @@
                     <button type="button"
                             class="device-toggle @(item.IsOnline ? "on" : "off")"
                             @onclick="() => ToggleDevice(item.Id)">
-                        @(item.IsOnline ? "ON" : "OFF")
+                        @(item.IsOnline ? I18n["devices.on"] : I18n["devices.off"])
                     </button>
                 </div>
 
@@ -57,11 +57,94 @@
     </div>
 
     <button type="button" class="add-device-btn" @onclick="OpenAddDeviceModal">
-        + @I18n["devices.add"]
+        @I18n["devices.add"]
     </button>
 </div>
 
+@if (showAddModal)
+{
+    <div class="add-device-overlay" @onclick="CloseAddDeviceModal">
+        <div class="add-device-modal" @onclick:stopPropagation="true">
+            <div class="add-device-header">
+                <div>
+                    <div class="add-device-kicker">@I18n["devices.title"]</div>
+                    <h2>@I18n["devices.addTitle"]</h2>
+                </div>
+
+                <button type="button"
+                        class="modal-close-btn"
+                        @onclick="CloseAddDeviceModal">
+                    ×
+                </button>
+            </div>
+
+            <div class="add-device-form">
+                <div class="form-group">
+                    <label>@I18n["devices.name"]</label>
+                    <input class="device-input"
+                           @bind="newDeviceName"
+                           placeholder="@I18n["devices.name"]" />
+                </div>
+
+                <div class="form-group">
+                    <label>@I18n["devices.type"]</label>
+                    <select class="device-input" @bind="newDeviceType">
+                        <option value="smart valve">@I18n["devices.smartValve"]</option>
+                        <option value="leak sensor">@I18n["devices.leakSensor"]</option>
+                        <option value="sensor">@I18n["devices.sensor"]</option>
+                        <option value="hub">@I18n["devices.hub"]</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>@I18n["devices.icon"]</label>
+                        <select class="device-input" @bind="newDeviceIcon">
+                            <option value="💧">💧 @I18n["devices.water"]</option>
+                            <option value="🔥">🔥 @I18n["devices.gas"]</option>
+                            <option value="🌡">🌡 @I18n["devices.temperature"]</option>
+                            <option value="◔">◔ @I18n["devices.gauge"]</option>
+                            <option value="◎">◎ @I18n["devices.hub"]</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>@I18n["devices.signal"]</label>
+                        <select class="device-input" @bind="newDeviceSignal">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="add-device-actions">
+                <button type="button"
+                        class="secondary-btn modal-btn"
+                        @onclick="CloseAddDeviceModal">
+                    @I18n["devices.cancel"]
+                </button>
+
+                <button type="button"
+                        class="primary-btn modal-btn"
+                        @onclick="AddDevice">
+                    @I18n["devices.confirmAdd"]
+                </button>
+            </div>
+        </div>
+    </div>
+}
+
 @code {
+    private bool showAddModal;
+
+    private string newDeviceName = "";
+    private string newDeviceType = "smart valve";
+    private string newDeviceIcon = "💧";
+    private int newDeviceSignal = 4;
+
     protected override void OnInitialized()
     {
         AppState.OnChange += Refresh;
@@ -75,21 +158,52 @@
 
     private void OpenAddDeviceModal()
     {
-        // Si ya tienes modal, aquí llamas a tu lógica.
-        // Ejemplo:
-        // showAddModal = true;
+        newDeviceName = "";
+        newDeviceType = "smart valve";
+        newDeviceIcon = "💧";
+        newDeviceSignal = 4;
+        showAddModal = true;
+    }
+
+    private void CloseAddDeviceModal()
+    {
+        showAddModal = false;
+    }
+
+    private void AddDevice()
+    {
+        if (string.IsNullOrWhiteSpace(newDeviceName))
+            return;
+
+        AppState.AddDevice(new DeviceState
+        {
+            Id = Guid.NewGuid().ToString(),
+            Name = newDeviceName.Trim(),
+            Type = newDeviceType,
+            Icon = newDeviceIcon,
+            Signal = newDeviceSignal,
+            IsOnline = true
+        });
+
+        showAddModal = false;
     }
 
     private string DeviceTypeLabel(string? type)
     {
         return type?.ToLowerInvariant() switch
         {
-            "smart valve" => I18n["devices.smartValve"],
-            "leak sensor" => I18n["devices.leakSensor"],
-            "sensor" => I18n["devices.sensor"],
-            "hub" => I18n["devices.hub"],
+            "smart valve" => DeviceText("devices.smartValve", "Smart valve"),
+            "leak sensor" => DeviceText("devices.leakSensor", "Leak sensor"),
+            "sensor" => DeviceText("devices.sensor", "Sensor"),
+            "hub" => DeviceText("devices.hub", "Hub"),
             _ => type ?? ""
         };
+    }
+
+    private string DeviceText(string key, string fallback)
+    {
+        var value = I18n[key];
+        return value == key ? fallback : value;
     }
 
     private void Refresh()

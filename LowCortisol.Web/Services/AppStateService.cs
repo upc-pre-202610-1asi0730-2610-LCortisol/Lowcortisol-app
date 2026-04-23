@@ -1,79 +1,160 @@
-﻿namespace LowCortisol.Web.Services;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace LowCortisol.Web.Services;
 
 public class AppStateService
 {
     public event Action? OnChange;
 
+    public int WaterPercentage { get; private set; } = 74;
+    public int GasPercentage { get; private set; } = 37;
+
+    public List<DeviceState> Devices { get; private set; } = new()
+    {
+        new DeviceState
+        {
+            Id = Guid.NewGuid().ToString(),
+            Name = "Main water valve",
+            Type = "smart valve",
+            Icon = "💧",
+            Signal = 4,
+            IsOnline = true
+        },
+        new DeviceState
+        {
+            Id = Guid.NewGuid().ToString(),
+            Name = "Gas main",
+            Type = "smart valve",
+            Icon = "🔥",
+            Signal = 4,
+            IsOnline = true
+        },
+        new DeviceState
+        {
+            Id = Guid.NewGuid().ToString(),
+            Name = "Kitchen sensor",
+            Type = "leak sensor",
+            Icon = "💧",
+            Signal = 4,
+            IsOnline = true
+        },
+        new DeviceState
+        {
+            Id = Guid.NewGuid().ToString(),
+            Name = "Boiler temp",
+            Type = "sensor",
+            Icon = "🧪",
+            Signal = 2,
+            IsOnline = true
+        },
+        new DeviceState
+        {
+            Id = Guid.NewGuid().ToString(),
+            Name = "Pressure gauge",
+            Type = "sensor",
+            Icon = "◔",
+            Signal = 0,
+            IsOnline = false
+        },
+        new DeviceState
+        {
+            Id = Guid.NewGuid().ToString(),
+            Name = "Hub mini",
+            Type = "hub",
+            Icon = "◎",
+            Signal = 4,
+            IsOnline = true
+        }
+    };
+
     public List<ValveState> Valves { get; } = new()
     {
-        new()
+        new ValveState
         {
             Id = "water-main",
             Name = "Main water valve",
             Location = "Basement",
             Threshold = 12,
-            Unit = "L/min",
-            IsOn = true,
             Min = 0,
-            Max = 20,
+            Max = 30,
             Step = 1,
-            Group = "Water"
+            Unit = "L/min",
+            IsOn = true
         },
-        new()
+        new ValveState
         {
             Id = "kitchen-line",
             Name = "Kitchen line",
             Location = "Ground floor",
             Threshold = 6,
-            Unit = "L/min",
-            IsOn = true,
             Min = 0,
             Max = 20,
             Step = 1,
-            Group = "Water"
+            Unit = "L/min",
+            IsOn = true
         },
-        new()
+        new ValveState
         {
             Id = "gas-main",
             Name = "Gas main",
             Location = "Utility room",
             Threshold = 1.2,
-            Unit = "bar",
-            IsOn = true,
-            Min = 0.1,
+            Min = 0,
             Max = 3,
             Step = 0.1,
-            Group = "Gas"
+            Unit = "bar",
+            IsOn = true
         },
-        new()
+        new ValveState
         {
             Id = "garden-valve",
             Name = "Garden valve",
             Location = "Outdoor",
             Threshold = 8,
-            Unit = "L/min",
-            IsOn = false,
             Min = 0,
             Max = 20,
             Step = 1,
-            Group = "Water"
+            Unit = "L/min",
+            IsOn = false
         }
     };
 
-    public List<DeviceState> Devices { get; } = new()
+    public void ToggleDevice(string id)
     {
-        new() { Id = "water-main", Name = "Main water valve", Type = "Smart valve", Icon = "💧", IsOnline = true, Signal = 4 },
-        new() { Id = "gas-main", Name = "Gas main", Type = "Smart valve", Icon = "🔥", IsOnline = true, Signal = 4 },
-        new() { Id = "kitchen-sensor", Name = "Kitchen sensor", Type = "Leak sensor", Icon = "💧", IsOnline = true, Signal = 4 },
-        new() { Id = "boiler-temp", Name = "Boiler temp", Type = "Sensor", Icon = "🌡", IsOnline = true, Signal = 2 },
-        new() { Id = "pressure-gauge", Name = "Pressure gauge", Type = "Sensor", Icon = "◔", IsOnline = false, Signal = 1 },
-        new() { Id = "hub-mini", Name = "Hub mini", Type = "Hub", Icon = "◉", IsOnline = true, Signal = 4 }
-    };
+        var device = Devices.FirstOrDefault(x => x.Id == id);
+        if (device is null) return;
 
-    public int WaterPercentage { get; private set; } = 74;
-    public int GasPercentage { get; private set; } = 37;
-    
-    
+        device.IsOnline = !device.IsOnline;
+        device.Signal = device.IsOnline ? Math.Max(device.Signal, 3) : 0;
+
+        NotifyStateChanged();
+    }
+
+    public void AddDevice(DeviceState device)
+    {
+        Devices.Add(device);
+        NotifyStateChanged();
+    }
+
+    public void ToggleValve(string id)
+    {
+        var valve = Valves.FirstOrDefault(x => x.Id == id);
+        if (valve is null) return;
+
+        valve.IsOn = !valve.IsOn;
+        NotifyStateChanged();
+    }
+
+    public void UpdateValveThreshold(string id, double value)
+    {
+        var valve = Valves.FirstOrDefault(x => x.Id == id);
+        if (valve is null) return;
+
+        valve.Threshold = value;
+        NotifyStateChanged();
+    }
 
     public void SetWaterPercentage(int value)
     {
@@ -95,60 +176,26 @@ public class AppStateService
         foreach (var valve in Valves)
             valve.IsOn = false;
 
-        foreach (var device in Devices.Where(d => d.Id == "water-main" || d.Id == "gas-main"))
+        foreach (var device in Devices)
+        {
             device.IsOnline = false;
+            device.Signal = 0;
+        }
 
         NotifyStateChanged();
     }
 
-    public void ToggleValve(string id)
-    {
-        var valve = Valves.FirstOrDefault(v => v.Id == id);
-        if (valve is null) return;
+    private void NotifyStateChanged() => OnChange?.Invoke();
+}
 
-        valve.IsOn = !valve.IsOn;
-
-        var device = Devices.FirstOrDefault(d => d.Id == id);
-        if (device is not null)
-            device.IsOnline = valve.IsOn;
-
-        NotifyStateChanged();
-    }
-
-    public void UpdateValveThreshold(string id, double value)
-    {
-        var valve = Valves.FirstOrDefault(v => v.Id == id);
-        if (valve is null) return;
-
-        valve.Threshold = value;
-        NotifyStateChanged();
-    }
-
-    public void ToggleDevice(string id)
-    {
-        var device = Devices.FirstOrDefault(d => d.Id == id);
-        if (device is null) return;
-
-        device.IsOnline = !device.IsOnline;
-
-        // Si el dispositivo corresponde a una válvula, sincronízalo
-        var valve = Valves.FirstOrDefault(v => v.Id == id);
-        if (valve is not null)
-            valve.IsOn = device.IsOnline;
-
-        NotifyStateChanged();
-    }
-
-    public void AddDevice(DeviceState newDevice)
-    {
-        if (string.IsNullOrWhiteSpace(newDevice.Id))
-            newDevice.Id = Guid.NewGuid().ToString("N");
-
-        Devices.Add(newDevice);
-        NotifyStateChanged();
-    }
-
-    public void NotifyStateChanged() => OnChange?.Invoke();
+public class DeviceState
+{
+    public string Id { get; set; } = Guid.NewGuid().ToString();
+    public string Name { get; set; } = "";
+    public string Type { get; set; } = "";
+    public string Icon { get; set; } = "";
+    public int Signal { get; set; } = 4;
+    public bool IsOnline { get; set; } = true;
 }
 
 public class ValveState
@@ -157,20 +204,9 @@ public class ValveState
     public string Name { get; set; } = "";
     public string Location { get; set; } = "";
     public double Threshold { get; set; }
-    public string Unit { get; set; } = "";
-    public bool IsOn { get; set; }
     public double Min { get; set; }
     public double Max { get; set; }
     public double Step { get; set; }
-    public string Group { get; set; } = "";
-}
-
-public class DeviceState
-{
-    public string Id { get; set; } = "";
-    public string Name { get; set; } = "";
-    public string Type { get; set; } = "";
-    public string Icon { get; set; } = "";
-    public bool IsOnline { get; set; }
-    public int Signal { get; set; }
+    public string Unit { get; set; } = "";
+    public bool IsOn { get; set; }
 }

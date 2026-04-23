@@ -1,48 +1,114 @@
 ﻿@page "/profile"
+@rendermode InteractiveServer
+
+@inject LowCortisol.Web.Auth.AuthService Auth
+@inject NavigationManager Nav
 @inject LowCortisol.Web.Services.I18nService I18n
 
-<div class="space-y-5 profile-page">
-    <h1 class="page-title">@I18n["profile.title"]</h1>
-    <div class="section-divider"></div>
-
-    <div class="profile-header">
-        <div class="profile-avatar">
-            J
-        </div>
-
-        <div class="profile-name">Jean Franck Loa Rojas</div>
-        <div class="profile-email">loarojas1@gmail.com</div>
-
-        <div class="profile-badge">
-            @I18n["profile.owner"]
-        </div>
+@if (isLoading)
+{
+    <div class="soft-card p-8 text-center text-gray-500">
+        Cargando perfil...
     </div>
-
-    <a href="/devices" class="soft-card profile-link-card">
-        <div class="profile-link-left">
-            <div class="icon-chip bg-chip-blue text-xl">⌘</div>
-            <div class="profile-link-text">@I18n["profile.devices"]</div>
-        </div>
-        <div class="profile-link-arrow">›</div>
-    </a>
-
-    <a href="/reports" class="soft-card profile-link-card">
-        <div class="profile-link-left">
-            <div class="icon-chip bg-chip-blue text-xl">▣</div>
-            <div class="profile-link-text">@I18n["profile.reports"]</div>
-        </div>
-        <div class="profile-link-arrow">›</div>
-    </a>
-
-    <div class="soft-card profile-link-card">
-        <div class="profile-link-left">
-            <div class="icon-chip bg-chip-blue text-xl">◠</div>
-            <div class="profile-link-text">@I18n["profile.settings"]</div>
-        </div>
-        <div class="profile-link-arrow">›</div>
+}
+else if (currentUser is null)
+{
+    <div class="soft-card p-8 text-center text-gray-500">
+        Redirigiendo...
     </div>
+}
+else
+{
+    <div class="space-y-5 profile-page">
+        <h1 class="page-title">@I18n["profile.title"]</h1>
+        <div class="section-divider"></div>
 
-    <button class="profile-signout-btn">
-        ⤴ @I18n["profile.signout"]
-    </button>
-</div>
+        <div class="profile-header">
+            <div class="profile-avatar">
+                @GetInitial(currentUser.Name)
+            </div>
+
+            <div class="profile-name">@currentUser.Name</div>
+            <div class="profile-email">@currentUser.Email</div>
+            <div class="profile-badge">@TranslateAccountType(currentUser.AccountType)</div>
+        </div>
+
+        <a href="/devices" class="soft-card profile-link-card">
+            <div class="profile-link-left">
+                <div class="icon-chip bg-chip-blue text-xl">⌘</div>
+                <div class="profile-link-text">@I18n["profile.devices"]</div>
+            </div>
+            <div class="profile-link-arrow">›</div>
+        </a>
+
+        <a href="/reports" class="soft-card profile-link-card">
+            <div class="profile-link-left">
+                <div class="icon-chip bg-chip-blue text-xl">▣</div>
+                <div class="profile-link-text">@I18n["profile.reports"]</div>
+            </div>
+            <div class="profile-link-arrow">›</div>
+        </a>
+
+        <div class="soft-card profile-link-card">
+            <div class="profile-link-left">
+                <div class="icon-chip bg-chip-blue text-xl">◠</div>
+                <div class="profile-link-text">@I18n["profile.settings"]</div>
+            </div>
+            <div class="profile-link-arrow">›</div>
+        </div>
+
+        <button class="profile-signout-btn" @onclick="SignOut">
+            ⤴ @I18n["profile.signout"]
+        </button>
+    </div>
+}
+
+@code {
+    private LowCortisol.Web.Auth.AppUser? currentUser;
+    private bool isLoading = true;
+    private bool _checkedUser = false;
+
+    private string TranslateAccountType(string? accountType)
+    {
+        return accountType?.Trim().ToLowerInvariant() switch
+        {
+            "homeowner" => I18n["auth.accountType.homeowner"],
+            "admin" => I18n["auth.accountType.admin"],
+            "technician" => I18n["auth.accountType.technician"],
+            _ => accountType ?? ""
+        };
+    }
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender || _checkedUser)
+            return;
+
+        _checkedUser = true;
+
+        currentUser = await Auth.GetCurrentUserAsync();
+        isLoading = false;
+
+        if (currentUser is null)
+        {
+            Nav.NavigateTo("/login", forceLoad: true);
+            return;
+        }
+
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async Task SignOut()
+    {
+        await Auth.LogoutAsync();
+        Nav.NavigateTo("/login", forceLoad: true);
+    }
+
+    private static string GetInitial(string name)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+            return "U";
+
+        return name.Trim()[0].ToString().ToUpperInvariant();
+    }
+}

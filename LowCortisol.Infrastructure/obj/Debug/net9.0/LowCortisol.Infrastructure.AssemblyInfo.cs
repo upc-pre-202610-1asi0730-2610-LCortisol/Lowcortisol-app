@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LowCortisol.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c51539e564985b9922bd20e0a25267f433fb7693")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ec9f686b3b1f01b3417d7035003d9e1e66a6698")]
 [assembly: System.Reflection.AssemblyProductAttribute("LowCortisol.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LowCortisol.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

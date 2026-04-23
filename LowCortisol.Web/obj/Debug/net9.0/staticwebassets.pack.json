@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\LowCortisol.Web.bundle.scp.css",
-      "PackagePath": "staticwebassets\\LowCortisol.Web.grve1ww7m3.bundle.scp.css"
-    },
-    {
       "Id": "C:\\Users\\Asus\\RiderProjects\\Lowcortisol-app\\LowCortisol.Web\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },

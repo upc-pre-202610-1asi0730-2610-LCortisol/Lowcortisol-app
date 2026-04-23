@@ -28,6 +28,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21tb25cQ2lyY3VsYXJSaW5nLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Asus/RiderProjects/Lowcortisol-app/LowCortisol.Web/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Asus/RiderProjects/Lowcortisol-app/LowCortisol.Web/Components/Pages/Alerts.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBbGVydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -40,8 +44,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Asus/RiderProjects/Lowcortisol-app/LowCortisol.Web/Components/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Asus/RiderProjects/Lowcortisol-app/LowCortisol.Web/Components/Pages/Profile.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQcm9maWxlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/RiderProjects/Lowcortisol-app/LowCortisol.Web/Components/Pages/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZWdpc3Rlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Asus/RiderProjects/Lowcortisol-app/LowCortisol.Web/Components/Pages/Reports.razor]
@@ -59,7 +71,3 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/Asus/RiderProjects/Lowcortisol-app/LowCortisol.Web/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Asus/RiderProjects/Lowcortisol-app/LowCortisol.Web/Components/Layout/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-my9dbxakrf

@@ -70,7 +70,6 @@
   "valves.outdoor": "Área externa",
 
   "profile.title": "Perfil",
-  "profile.homeowner": "PROPRIETÁRIO",
   "profile.devices": "Meus dispositivos",
   "profile.reports": "Relatórios",
   "profile.settings": "Configurações da conta",
@@ -85,5 +84,28 @@
   "reports.export": "Exportar relatório",
   "reports.period7": "7D",
   "reports.period30": "30D",
-  "reports.period90": "90D"
+  "reports.period90": "90D",
+
+  "auth.loginTitle": "LOWCORTISOL",
+  "auth.loginSubtitle": "Proteção inteligente de válvulas",
+  "auth.email": "E-MAIL",
+  "auth.password": "SENHA",
+  "auth.emailPlaceholder": "voce@exemplo.com",
+  "auth.passwordPlaceholder": "••••••••",
+  "auth.signIn": "Entrar",
+  "auth.createAccount": "Criar uma conta",
+
+  "auth.registerTitle": "Junte-se à LOWCORTISOL",
+  "auth.registerSubtitle": "Crie sua conta",
+  "auth.name": "NOME",
+  "auth.phone": "TELEFONE",
+  "auth.namePlaceholder": "Seu nome",
+  "auth.phonePlaceholder": "+55 99999 9999",
+  "auth.createPasswordPlaceholder": "Crie uma senha",
+  "auth.accountType": "TIPO DE CONTA",
+  "auth.backToLogin": "Voltar para o login",
+
+  "auth.accountType.homeowner": "Proprietário",
+  "auth.accountType.admin": "Administrador",
+  "auth.accountType.technician": "Técnico"
 }

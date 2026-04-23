@@ -1,25 +1,44 @@
-using LowCortisol.Application.Services;
-using LowCortisol.Domain.Interfaces;
-using LowCortisol.Infrastructure.Repositories;
-using LowCortisol.Web.Components;
+using LowCortisol.Web.Auth;
 using LowCortisol.Web.Services;
+using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-builder.Services.AddScoped<IDeviceRepository, DeviceRepository>();
-builder.Services.AddScoped<DeviceService>();
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite("Data Source=lowcortisol.db"));
+
+builder.Services.AddScoped<ProtectedLocalStorage>();
+builder.Services.AddScoped<AuthService>();
+
 builder.Services.AddScoped<AppStateService>();
 builder.Services.AddScoped<I18nService>();
 
 var app = builder.Build();
 
-app.UseStaticFiles();
-app.UseAntiforgery();
+// Ensure DB exists
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.EnsureCreated();
+}
 
-app.MapRazorComponents<App>()
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error", createScopeForErrors: true);
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+app.UseAntiforgery();
+app.MapStaticAssets();
+
+app.MapRazorComponents<LowCortisol.Web.Components.App>()
     .AddInteractiveServerRenderMode();
 
 app.Run();

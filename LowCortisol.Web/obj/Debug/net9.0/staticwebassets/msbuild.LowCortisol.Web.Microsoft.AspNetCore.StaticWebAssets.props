@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>9bnjzohkmc</Fingerprint>
-      <Integrity>O5CegKdBOhaO08NfswiTM7jaKgm0CRFYHLXH0xpr8Zg=</Integrity>
+      <Fingerprint>wr7ez1ac3g</Fingerprint>
+      <Integrity>3GV6wb1Vh0I0nSIowZxUZ+IQTFSM+eZhttS3vHtfiwQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.css'))</OriginalItemSpec>
@@ -48,8 +48,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>tphupu1eg2</Fingerprint>
-      <Integrity>MTYE+EGrN18gQ1qOElozIubVBDPj1S6LAtdSxt/lzwM=</Integrity>
+      <Fingerprint>sw9dtj0txx</Fingerprint>
+      <Integrity>bBztAYJTC85DbCZo8N6q7cw6FONLG4DOYbZUvjZ0nNI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\i18n\en.json'))</OriginalItemSpec>
@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>1onmbojt2q</Fingerprint>
-      <Integrity>ryPxI6/VpheSBEFnYgc+xfOi7ZpUQGAzEcGD1E6xS3U=</Integrity>
+      <Fingerprint>jy02xapl4e</Fingerprint>
+      <Integrity>W2rpDxrwV0cvCRY64bLSRIARGTAnle5pXYAIJPH9e5k=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\i18n\es.json'))</OriginalItemSpec>
@@ -102,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kinao4iq90</Fingerprint>
-      <Integrity>dCLsKzYTqNTC0PHSLMbkgziI5Ju12mHcUQBetCnGgh0=</Integrity>
+      <Fingerprint>vvmskmc0g4</Fingerprint>
+      <Integrity>284DWjgd7UAbVXl1BL2xqtQY7Iaqfc+5uohsb/omMTs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\i18n\pt.json'))</OriginalItemSpec>
@@ -917,24 +917,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\js\bootstrap.min.js.map'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\LowCortisol.Web.grve1ww7m3.bundle.scp.css'))">
-      <SourceType>Package</SourceType>
-      <SourceId>LowCortisol.Web</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/LowCortisol.Web</BasePath>
-      <RelativePath>LowCortisol.Web.grve1ww7m3.bundle.scp.css</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>Reference</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName>ScopedCss</AssetTraitName>
-      <AssetTraitValue>ProjectBundle</AssetTraitValue>
-      <Fingerprint>grve1ww7m3</Fingerprint>
-      <Integrity>tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\LowCortisol.Web.grve1ww7m3.bundle.scp.css'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

@@ -1,6 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Components.Web
 @inherits LayoutComponentBase
 @implements IDisposable
+@inject LowCortisol.Web.Auth.AuthService Auth
 @inject NavigationManager Nav
 @inject I18nService I18n
 
@@ -31,40 +32,73 @@
         @Body
     </main>
 
-    <nav class="bottom-nav">
-        <div class="bottom-nav-inner">
-            <a href="/" class="nav-item @(IsActive("/"))">
-                <span style="font-size:22px;">⌂</span>
-                <span>@I18n["nav.home"]</span>
-            </a>
+    @if (!IsPublicPage())
+    {
+        <nav class="bottom-nav">
+            <div class="bottom-nav-inner">
+                <a href="/" class="nav-item @(IsActive("/"))">
+                    <span style="font-size:22px;">⌂</span>
+                    <span>@I18n["nav.home"]</span>
+                </a>
 
-            <a href="/alerts" class="nav-item @(IsActive("/alerts"))">
-                <span style="font-size:20px;">◌</span>
-                <span>@I18n["nav.alerts"]</span>
-            </a>
+                <a href="/alerts" class="nav-item @(IsActive("/alerts"))">
+                    <span style="font-size:20px;">◌</span>
+                    <span>@I18n["nav.alerts"]</span>
+                </a>
 
-            <a href="/valves" class="nav-item @(IsActive("/valves"))">
-                <span style="font-size:20px;">≡</span>
-                <span>@I18n["nav.valves"]</span>
-            </a>
+                <a href="/valves" class="nav-item @(IsActive("/valves"))">
+                    <span style="font-size:20px;">≡</span>
+                    <span>@I18n["nav.valves"]</span>
+                </a>
 
-            <a href="/profile" class="nav-item @(IsActive("/profile"))">
-                <span style="font-size:20px;">◠</span>
-                <span>@I18n["nav.profile"]</span>
-            </a>
-        </div>
-    </nav>
+                <a href="/profile" class="nav-item @(IsActive("/profile"))">
+                    <span style="font-size:20px;">◠</span>
+                    <span>@I18n["nav.profile"]</span>
+                </a>
+            </div>
+        </nav>
+    }
 </div>
 
 @code {
     private int _langVersion = 0;
     private string selectedLang = "es";
-
+    private bool _checkedAuth = false;
+    
+    private bool IsPublicPage()
+    {
+        var path = new Uri(Nav.Uri).AbsolutePath.ToLowerInvariant();
+        return path == "/login" || path == "/register";
+    }
+    
     protected override async Task OnInitializedAsync()
     {
         I18n.OnChange += RefreshLayout;
         await I18n.InitializeAsync("es");
         selectedLang = I18n.CurrentLanguage;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender || _checkedAuth)
+            return;
+
+        _checkedAuth = true;
+
+        var path = new Uri(Nav.Uri).AbsolutePath.ToLowerInvariant();
+        var isPublicPage = path == "/login" || path == "/register";
+
+        if (!isPublicPage)
+        {
+            var isAuthenticated = await Auth.IsAuthenticatedAsync();
+            if (!isAuthenticated)
+            {
+                Nav.NavigateTo("/login", forceLoad: true);
+                return;
+            }
+        }
+
+        await InvokeAsync(StateHasChanged);
     }
 
     private async Task SwitchToEs() => await SwitchLanguage("es");

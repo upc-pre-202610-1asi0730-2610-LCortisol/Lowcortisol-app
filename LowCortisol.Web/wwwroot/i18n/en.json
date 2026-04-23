@@ -70,7 +70,6 @@
   "valves.outdoor": "Outdoor",
 
   "profile.title": "Profile",
-  "profile.homeowner": "HOMEOWNER",
   "profile.devices": "My devices",
   "profile.reports": "Reports",
   "profile.settings": "Account settings",
@@ -85,5 +84,28 @@
   "reports.export": "Export report",
   "reports.period7": "7D",
   "reports.period30": "30D",
-  "reports.period90": "90D"
+  "reports.period90": "90D",
+
+  "auth.loginTitle": "LOWCORTISOL",
+  "auth.loginSubtitle": "Smart valve protection",
+  "auth.email": "EMAIL",
+  "auth.password": "PASSWORD",
+  "auth.emailPlaceholder": "you@example.com",
+  "auth.passwordPlaceholder": "••••••••",
+  "auth.signIn": "Sign in",
+  "auth.createAccount": "Create an account",
+
+  "auth.registerTitle": "Join LOWCORTISOL",
+  "auth.registerSubtitle": "Create your account",
+  "auth.name": "NAME",
+  "auth.phone": "PHONE",
+  "auth.namePlaceholder": "Your name",
+  "auth.phonePlaceholder": "+51 999 999 999",
+  "auth.createPasswordPlaceholder": "Create password",
+  "auth.accountType": "ACCOUNT TYPE",
+  "auth.backToLogin": "Back to login",
+
+  "auth.accountType.homeowner": "Homeowner",
+  "auth.accountType.admin": "Admin",
+  "auth.accountType.technician": "Technician"
 }

@@ -10,4 +10,10 @@
       <ProjectReference Include="..\LowCortisol.Infrastructure\LowCortisol.Infrastructure.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="BCrypt.Net-Next" Version="4.1.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0" />
+    </ItemGroup>
+
 </Project>

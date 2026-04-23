@@ -1,16 +1,16 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/app.9bnjzohkmc.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"9bnjzohkmc"},{"Name":"integrity","Value":"sha256-O5CegKdBOhaO08NfswiTM7jaKgm0CRFYHLXH0xpr8Zg="},{"Name":"label","Value":"_content/LowCortisol.Web/app.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"14224"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022O5CegKdBOhaO08NfswiTM7jaKgm0CRFYHLXH0xpr8Zg=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Apr 2026 06:27:18 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/app.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-O5CegKdBOhaO08NfswiTM7jaKgm0CRFYHLXH0xpr8Zg="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"14224"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022O5CegKdBOhaO08NfswiTM7jaKgm0CRFYHLXH0xpr8Zg=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Apr 2026 06:27:18 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-3GV6wb1Vh0I0nSIowZxUZ\u002BIQTFSM\u002BeZhttS3vHtfiwQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"27786"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00223GV6wb1Vh0I0nSIowZxUZ\u002BIQTFSM\u002BeZhttS3vHtfiwQ=\u0022"},{"Name":"Last-Modified","Value":"Thu, 23 Apr 2026 00:22:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/app.wr7ez1ac3g.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wr7ez1ac3g"},{"Name":"integrity","Value":"sha256-3GV6wb1Vh0I0nSIowZxUZ\u002BIQTFSM\u002BeZhttS3vHtfiwQ="},{"Name":"label","Value":"_content/LowCortisol.Web/app.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"27786"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00223GV6wb1Vh0I0nSIowZxUZ\u002BIQTFSM\u002BeZhttS3vHtfiwQ=\u0022"},{"Name":"Last-Modified","Value":"Thu, 23 Apr 2026 00:22:51 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/favicon.ifv42okdf2.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.png'))</AssetFile>
@@ -27,26 +27,26 @@
     <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/i18n/en.json">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\i18n\en.json'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-MTYE\u002BEGrN18gQ1qOElozIubVBDPj1S6LAtdSxt/lzwM="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2925"},{"Name":"Content-Type","Value":"application/json"},{"Name":"ETag","Value":"\u0022MTYE\u002BEGrN18gQ1qOElozIubVBDPj1S6LAtdSxt/lzwM=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Apr 2026 06:12:54 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-bBztAYJTC85DbCZo8N6q7cw6FONLG4DOYbZUvjZ0nNI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3721"},{"Name":"Content-Type","Value":"application/json"},{"Name":"ETag","Value":"\u0022bBztAYJTC85DbCZo8N6q7cw6FONLG4DOYbZUvjZ0nNI=\u0022"},{"Name":"Last-Modified","Value":"Thu, 23 Apr 2026 00:49:21 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/i18n/en.tphupu1eg2.json">
+    <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/i18n/en.sw9dtj0txx.json">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\i18n\en.json'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"tphupu1eg2"},{"Name":"integrity","Value":"sha256-MTYE\u002BEGrN18gQ1qOElozIubVBDPj1S6LAtdSxt/lzwM="},{"Name":"label","Value":"_content/LowCortisol.Web/i18n/en.json"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2925"},{"Name":"Content-Type","Value":"application/json"},{"Name":"ETag","Value":"\u0022MTYE\u002BEGrN18gQ1qOElozIubVBDPj1S6LAtdSxt/lzwM=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Apr 2026 06:12:54 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/i18n/es.1onmbojt2q.json">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\i18n\es.json'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"1onmbojt2q"},{"Name":"integrity","Value":"sha256-ryPxI6/VpheSBEFnYgc\u002BxfOi7ZpUQGAzEcGD1E6xS3U="},{"Name":"label","Value":"_content/LowCortisol.Web/i18n/es.json"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3204"},{"Name":"Content-Type","Value":"application/json"},{"Name":"ETag","Value":"\u0022ryPxI6/VpheSBEFnYgc\u002BxfOi7ZpUQGAzEcGD1E6xS3U=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Apr 2026 06:12:48 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"sw9dtj0txx"},{"Name":"integrity","Value":"sha256-bBztAYJTC85DbCZo8N6q7cw6FONLG4DOYbZUvjZ0nNI="},{"Name":"label","Value":"_content/LowCortisol.Web/i18n/en.json"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3721"},{"Name":"Content-Type","Value":"application/json"},{"Name":"ETag","Value":"\u0022bBztAYJTC85DbCZo8N6q7cw6FONLG4DOYbZUvjZ0nNI=\u0022"},{"Name":"Last-Modified","Value":"Thu, 23 Apr 2026 00:49:21 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/i18n/es.json">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\i18n\es.json'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ryPxI6/VpheSBEFnYgc\u002BxfOi7ZpUQGAzEcGD1E6xS3U="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3204"},{"Name":"Content-Type","Value":"application/json"},{"Name":"ETag","Value":"\u0022ryPxI6/VpheSBEFnYgc\u002BxfOi7ZpUQGAzEcGD1E6xS3U=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Apr 2026 06:12:48 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-W2rpDxrwV0cvCRY64bLSRIARGTAnle5pXYAIJPH9e5k="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4056"},{"Name":"Content-Type","Value":"application/json"},{"Name":"ETag","Value":"\u0022W2rpDxrwV0cvCRY64bLSRIARGTAnle5pXYAIJPH9e5k=\u0022"},{"Name":"Last-Modified","Value":"Thu, 23 Apr 2026 00:49:21 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/i18n/es.jy02xapl4e.json">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\i18n\es.json'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jy02xapl4e"},{"Name":"integrity","Value":"sha256-W2rpDxrwV0cvCRY64bLSRIARGTAnle5pXYAIJPH9e5k="},{"Name":"label","Value":"_content/LowCortisol.Web/i18n/es.json"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4056"},{"Name":"Content-Type","Value":"application/json"},{"Name":"ETag","Value":"\u0022W2rpDxrwV0cvCRY64bLSRIARGTAnle5pXYAIJPH9e5k=\u0022"},{"Name":"Last-Modified","Value":"Thu, 23 Apr 2026 00:49:21 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/i18n/i18n.3lmsmvssee.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\i18n\i18n.js'))</AssetFile>
@@ -63,14 +63,14 @@
     <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/i18n/pt.json">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\i18n\pt.json'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-dCLsKzYTqNTC0PHSLMbkgziI5Ju12mHcUQBetCnGgh0="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3213"},{"Name":"Content-Type","Value":"application/json"},{"Name":"ETag","Value":"\u0022dCLsKzYTqNTC0PHSLMbkgziI5Ju12mHcUQBetCnGgh0=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Apr 2026 06:13:02 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-284DWjgd7UAbVXl1BL2xqtQY7Iaqfc\u002B5uohsb/omMTs="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4033"},{"Name":"Content-Type","Value":"application/json"},{"Name":"ETag","Value":"\u0022284DWjgd7UAbVXl1BL2xqtQY7Iaqfc\u002B5uohsb/omMTs=\u0022"},{"Name":"Last-Modified","Value":"Thu, 23 Apr 2026 00:49:21 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/i18n/pt.kinao4iq90.json">
+    <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/i18n/pt.vvmskmc0g4.json">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\i18n\pt.json'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kinao4iq90"},{"Name":"integrity","Value":"sha256-dCLsKzYTqNTC0PHSLMbkgziI5Ju12mHcUQBetCnGgh0="},{"Name":"label","Value":"_content/LowCortisol.Web/i18n/pt.json"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3213"},{"Name":"Content-Type","Value":"application/json"},{"Name":"ETag","Value":"\u0022dCLsKzYTqNTC0PHSLMbkgziI5Ju12mHcUQBetCnGgh0=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Apr 2026 06:13:02 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vvmskmc0g4"},{"Name":"integrity","Value":"sha256-284DWjgd7UAbVXl1BL2xqtQY7Iaqfc\u002B5uohsb/omMTs="},{"Name":"label","Value":"_content/LowCortisol.Web/i18n/pt.json"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4033"},{"Name":"Content-Type","Value":"application/json"},{"Name":"ETag","Value":"\u0022284DWjgd7UAbVXl1BL2xqtQY7Iaqfc\u002B5uohsb/omMTs=\u0022"},{"Name":"Last-Modified","Value":"Thu, 23 Apr 2026 00:49:21 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/js/circularRing.fproxixllz.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\circularRing.js'))</AssetFile>
@@ -611,18 +611,6 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"u9q1upor1n"},{"Name":"integrity","Value":"sha256-vqK8KwEVuWidx0Ddm5m5LyBriPDPl9TcjrKZQhkFSVA="},{"Name":"label","Value":"_content/LowCortisol.Web/lib/bootstrap/dist/js/bootstrap.js"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"149895"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022vqK8KwEVuWidx0Ddm5m5LyBriPDPl9TcjrKZQhkFSVA=\u0022"},{"Name":"Last-Modified","Value":"Tue, 21 Apr 2026 22:40:01 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/LowCortisol.Web.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\LowCortisol.Web.grve1ww7m3.bundle.scp.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2250"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc=\u0022"},{"Name":"Last-Modified","Value":"Tue, 21 Apr 2026 23:25:24 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/LowCortisol.Web/LowCortisol.Web.grve1ww7m3.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\LowCortisol.Web.grve1ww7m3.bundle.scp.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"grve1ww7m3"},{"Name":"integrity","Value":"sha256-tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc="},{"Name":"label","Value":"_content/LowCortisol.Web/LowCortisol.Web.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2250"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022tIbvaw3XPEDmOUD6itVMaQdCRIUmimfHiS5vOx8I8Oc=\u0022"},{"Name":"Last-Modified","Value":"Tue, 21 Apr 2026 23:25:24 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>
