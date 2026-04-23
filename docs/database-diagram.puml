@@ -1,0 +1,18 @@
+﻿@startuml
+hide circle
+skinparam linetype ortho
+skinparam packageStyle rectangle
+
+title LowCortisol - Database Diagram
+
+entity "AppUser" as AppUser {
+  * Id : int <<PK>>
+  --
+  * Name : string
+  * Email : string <<UK>>
+  Phone : string
+  * PasswordHash : string
+  * AccountType : string
+}
+
+@enduml
