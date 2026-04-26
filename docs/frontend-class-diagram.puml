@@ -2,99 +2,285 @@
 skinparam classAttributeIconSize 0
 skinparam packageStyle rectangle
 skinparam shadowing false
+skinparam linetype ortho
 
-title LowCortisol - Diagrama de clases Frontend
+title LowCortisol - Frontend Class Diagram
 
-package "LowCortisol.Web.Components.Layout" {
-    class MainLayout <<Razor Component>> {
-        -selectedLang : string
-        -_langVersion : int
-        -_checkedAuth : bool
-        +SwitchLanguage(lang : string)
-        +IsActive(route : string) : string
+package "Presentation" {
+
+  package "Pages" {
+    class LoginPage {
+      - email : string
+      - password : string
+      - errorMessage : string
+      - isSubmitting : bool
+      - _checkedSession : bool
+      + SignInAsync()
+      + OnAfterRenderAsync(firstRender)
     }
+
+    class RegisterPage {
+      - name : string
+      - email : string
+      - phone : string
+      - password : string
+      - role : string
+      - errorMessage : string
+      - isSubmitting : bool
+      - _checkedSession : bool
+      + RegisterAsync()
+      + OnAfterRenderAsync(firstRender)
+    }
+
+    class HomePage {
+      - _checkedSession : bool
+      + OnAfterRenderAsync(firstRender)
+    }
+
+    class DevicesPage {
+      - devices : List<DeviceDto>
+      - showCreatePanel : bool
+      - isSubmitting : bool
+      - errorMessage : string
+      - fatalError : string
+      - _checkedSession : bool
+      - isLoadingPage : bool
+      - newDeviceName : string
+      - newDeviceType : string
+      - newDeviceStatus : string
+      - newDeviceLocation : string
+      - newThresholdValue : decimal?
+      - newThresholdUnit : string?
+      + LoadDevicesAsync()
+      + OpenCreatePanel()
+      + CloseCreatePanel()
+      + CreateDeviceAsync()
+      + ChangeStatusAsync(deviceId, status)
+      + OnAfterRenderAsync(firstRender)
+    }
+
+    class ReportsPage {
+      - reports : List<ConsumptionReportDto>
+      - showGeneratePanel : bool
+      - isSubmitting : bool
+      - errorMessage : string
+      - fatalError : string
+      - selectedPeriod : string
+      - _checkedSession : bool
+      - isLoadingPage : bool
+      - newPeriod : string
+      - newWaterTotal : decimal
+      - newWaterUnit : string
+      - newGasTotal : decimal
+      - newGasUnit : string
+      + LoadReportsAsync()
+      + OpenGeneratePanel()
+      + CloseGeneratePanel()
+      + GenerateReportAsync()
+      + SelectPeriodAsync(period)
+      + BuildBars()
+      + OnAfterRenderAsync(firstRender)
+    }
+
+    class AlertsPage {
+      - incidents : List<IncidentDto>
+      - devices : List<DeviceDto>
+      - showCreatePanel : bool
+      - isSubmitting : bool
+      - errorMessage : string
+      - fatalError : string
+      - _checkedSession : bool
+      - isLoadingPage : bool
+      - selectedDeviceId : string
+      - newSeverity : string
+      - newDescription : string
+      + LoadDevicesAsync()
+      + LoadIncidentsAsync()
+      + OpenCreatePanel()
+      + CloseCreatePanel()
+      + CreateIncidentAsync()
+      + AssignToCurrentUserAsync(incidentId)
+      + UpdateStatusAsync(incidentId, status, note)
+      + OnAfterRenderAsync(firstRender)
+    }
+
+    class ProfilePage {
+      - _checkedSession : bool
+      + SignOut()
+      + TranslateRole(role)
+      + GetPermissionSummary(role)
+      + OnAfterRenderAsync(firstRender)
+    }
+  }
+
+  package "Layout" {
+    class MainLayout {
+      + SetLanguage(language)
+      + GetLangButtonClass(language)
+      + IsPublicPage()
+      + Refresh()
+    }
+  }
+
+  package "Services" {
+    class I18nService {
+      - _translations : Dictionary<String,String>
+      + CurrentLanguage : string
+      + OnChange : Action
+      + this[key] : string
+      + SetLanguageAsync(language)
+      - LoadLanguage(language)
+    }
+
+    class BrowserSessionService {
+      - UserIdKey : string
+      + SaveUserIdAsync(userId)
+      + GetUserIdAsync()
+      + ClearAsync()
+    }
+
+    class UiSessionService {
+      + IsAuthenticated : bool
+      + CurrentUser : UserDto
+      + OnChange : Action
+      + SignIn(user)
+      + SignOut()
+    }
+  }
+
+  package "Shared View Models / UI Models" {
+    class ChartBarVm {
+      + Label : string
+      + WaterHeight : int
+      + GasHeight : int
+      + WaterValueText : string
+      + GasValueText : string
+    }
+  }
 }
 
-package "LowCortisol.Web.Components.Common" {
-    class CircularRing <<Razor Component>> {
-    }
+package "Application Contracts" {
+  interface IIdentityAccessService {
+    + RegisterAsync(command)
+    + LoginAsync(command)
+    + GetByIdAsync(id)
+  }
+
+  interface IDeviceManagementService {
+    + RegisterAsync(command)
+    + UpdateStatusAsync(command)
+    + GetByOwnerAsync(ownerUserId)
+  }
+
+  interface IIncidentManagementService {
+    + CreateAsync(command)
+    + AssignAsync(command)
+    + UpdateStatusAsync(command)
+    + GetByDeviceAsync(deviceId)
+  }
+
+  interface IReportingService {
+    + GenerateAsync(command)
+    + GetByOwnerAsync(ownerUserId)
+    + GetByOwnerAndPeriodAsync(ownerUserId, period)
+  }
+
+  class UserDto {
+    + Id : Guid
+    + Name : string
+    + Email : string
+    + Phone : string
+    + Role : string
+    + IsActive : bool
+  }
+
+  class DeviceDto {
+    + Id : Guid
+    + Name : string
+    + Type : string
+    + Status : string
+    + Location : string
+    + SensorsCount : int
+    + ThresholdValue : decimal?
+    + ThresholdUnit : string
+  }
+
+  class IncidentDto {
+    + Id : Guid
+    + DeviceId : Guid
+    + ReportedByUserId : Guid
+    + AssignedUserId : Guid?
+    + Severity : string
+    + Status : string
+    + Description : string
+    + CreatedAtUtc : DateTime
+    + History : IReadOnlyCollection<string>
+  }
+
+  class ConsumptionReportDto {
+    + Id : Guid
+    + OwnerUserId : Guid
+    + Period : string
+    + TotalWaterConsumption : decimal
+    + TotalWaterUnit : string
+    + TotalGasConsumption : decimal
+    + TotalGasUnit : string
+    + GeneratedAtUtc : DateTime
+  }
 }
 
-package "LowCortisol.Web.Components.Pages" {
-    class Home <<Razor Component>>
-    class Alerts <<Razor Component>>
-    class Devices <<Razor Component>>
-    class Valves <<Razor Component>>
-    class Reports <<Razor Component>>
-    class Profile <<Razor Component>>
-    class Login <<Razor Component>>
-    class Register <<Razor Component>>
-}
-
-package "LowCortisol.Web.Services" {
-    class AppStateService <<Service>> {
-        +Devices
-        +Valves
-        +Reports
-        +ToggleDevice(id : string)
-        +OnChange
-    }
-
-    class I18nService <<Service>> {
-        +CurrentLanguage : string
-        +InitializeAsync(lang : string)
-        +SetLanguageAsync(lang : string)
-        +OnChange
-    }
-}
-
-package "LowCortisol.Web.Auth" {
-    class AuthService <<Service>> {
-        +RegisterAsync(name, email, phone, password, accountType)
-        +LoginAsync(email, password)
-        +LogoutAsync()
-        +GetCurrentUserAsync()
-        +IsAuthenticatedAsync() : bool
-    }
-
-    class AppUser {
-        +Id : int
-        +Name : string
-        +Email : string
-        +Phone : string
-        +AccountType : string
-    }
-}
-
-' Relaciones del layout
 MainLayout ..> I18nService
-MainLayout ..> AuthService
+MainLayout ..> UiSessionService
 
-' Relaciones principales de páginas con servicios
-Home ..> AppStateService
-Home ..> I18nService
-Home ..> CircularRing
+LoginPage ..> IIdentityAccessService
+LoginPage ..> BrowserSessionService
+LoginPage ..> UiSessionService
+LoginPage ..> I18nService
 
-Alerts ..> AppStateService
-Alerts ..> I18nService
+RegisterPage ..> IIdentityAccessService
+RegisterPage ..> BrowserSessionService
+RegisterPage ..> UiSessionService
+RegisterPage ..> I18nService
 
-Devices ..> AppStateService
-Devices ..> I18nService
+HomePage ..> IIdentityAccessService
+HomePage ..> BrowserSessionService
+HomePage ..> UiSessionService
+HomePage ..> I18nService
 
-Valves ..> AppStateService
-Valves ..> I18nService
+DevicesPage ..> IIdentityAccessService
+DevicesPage ..> IDeviceManagementService
+DevicesPage ..> BrowserSessionService
+DevicesPage ..> UiSessionService
+DevicesPage ..> I18nService
+DevicesPage ..> DeviceDto
 
-Reports ..> AppStateService
-Reports ..> I18nService
+ReportsPage ..> IIdentityAccessService
+ReportsPage ..> IReportingService
+ReportsPage ..> BrowserSessionService
+ReportsPage ..> UiSessionService
+ReportsPage ..> I18nService
+ReportsPage ..> ConsumptionReportDto
+ReportsPage ..> ChartBarVm
 
-Profile ..> I18nService
-Profile ..> AuthService
-Profile ..> AppUser
+AlertsPage ..> IIdentityAccessService
+AlertsPage ..> IIncidentManagementService
+AlertsPage ..> IDeviceManagementService
+AlertsPage ..> BrowserSessionService
+AlertsPage ..> UiSessionService
+AlertsPage ..> I18nService
+AlertsPage ..> IncidentDto
+AlertsPage ..> DeviceDto
 
-Login ..> AuthService
-Login ..> I18nService
+ProfilePage ..> IIdentityAccessService
+ProfilePage ..> BrowserSessionService
+ProfilePage ..> UiSessionService
+ProfilePage ..> I18nService
+ProfilePage ..> UserDto
 
-Register ..> AuthService
-Register ..> I18nService
+UiSessionService o-- UserDto
+DevicesPage o-- DeviceDto
+ReportsPage o-- ConsumptionReportDto
+AlertsPage o-- IncidentDto
+AlertsPage o-- DeviceDto
 
 @enduml

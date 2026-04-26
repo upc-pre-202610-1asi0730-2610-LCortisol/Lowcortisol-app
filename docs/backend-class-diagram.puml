@@ -2,93 +2,479 @@
 skinparam classAttributeIconSize 0
 skinparam packageStyle rectangle
 skinparam shadowing false
+skinparam linetype ortho
 
-title LowCortisol - Diagrama de clases Backend
+title LowCortisol - Backend Class Diagram (DDD)
 
-package "LowCortisol.Domain" {
+package "Domain" {
 
-    class Device {
-        +Id : string
-        +Name : string
-        +Type : string
-        +Icon : string
-        +Signal : int
-        +IsOnline : bool
+  package "IdentityAccess" {
+    class UserAccount <<AggregateRoot>> {
+      - Id : Guid
+      - Name : PersonName
+      - Email : EmailAddress
+      - Phone : PhoneNumber
+      - PasswordHash : PasswordHash
+      - Role : UserRole
+      - IsActive : bool
+      + ChangeName(name)
+      + ChangePhone(phone)
+      + ChangeRole(role)
+      + Activate()
+      + Deactivate()
     }
 
-    class DeviceDetail {
-        +Id : int
-        +DeviceId : string
-        +Location : string
-        +Description : string
+    class PersonName <<ValueObject>> {
+      - Value : string
     }
 
-    class SmartValve {
-        +Id : int
-        +Name : string
-        +Zone : string
-        +IsOpen : bool
-        +Threshold : double
+    class EmailAddress <<ValueObject>> {
+      - Value : string
     }
 
-    class Report {
-        +Id : int
-        +Title : string
-        +WaterConsumption : double
-        +GasConsumption : double
-        +CreatedAt : DateTime
+    class PhoneNumber <<ValueObject>> {
+      - Value : string
+    }
+
+    class PasswordHash <<ValueObject>> {
+      - Value : string
+    }
+
+    class UserRole <<ValueObject>> {
+      - Value : string
+    }
+
+    interface IUserAccountRepository {
+      + AddAsync(user)
+      + UpdateAsync(user)
+      + FindByIdAsync(id)
+      + FindByEmailAsync(email)
+    }
+
+    class UserAccountRegisteredDomainEvent
+    class UserAccountActivatedDomainEvent
+    class UserAccountDeactivatedDomainEvent
+
+    UserAccount *-- PersonName
+    UserAccount *-- EmailAddress
+    UserAccount *-- PhoneNumber
+    UserAccount *-- PasswordHash
+    UserAccount *-- UserRole
+  }
+
+  package "DeviceManagement" {
+    class Device <<AggregateRoot>> {
+      - Id : Guid
+      - OwnerUserId : Guid
+      - Name : DeviceName
+      - Type : DeviceType
+      - Status : DeviceStatus
+      - Location : DeviceLocation
+      - Threshold : DeviceThreshold
+      - Sensors : IReadOnlyCollection<Sensor>
+      + ChangeStatus(status)
+      + ChangeLocation(location)
+      + ChangeThreshold(threshold)
+      + AddSensor(sensor)
+    }
+
+    class Sensor <<Entity>> {
+      - Id : Guid
+      - DeviceId : Guid
+      - Name : string
+      - Type : string
+      - Unit : string
+      - IsActive : bool
+    }
+
+    class DeviceName <<ValueObject>> {
+      - Value : string
+    }
+
+    class DeviceType <<ValueObject>> {
+      - Value : string
+    }
+
+    class DeviceStatus <<ValueObject>> {
+      - Value : string
+    }
+
+    class DeviceLocation <<ValueObject>> {
+      - Value : string
+    }
+
+    class DeviceThreshold <<ValueObject>> {
+      - Value : decimal
+      - Unit : string
     }
 
     interface IDeviceRepository {
-        +GetAll() : IEnumerable<Device>
-        +GetById(id : string) : Device
-        +Add(device : Device) : void
-        +Update(device : Device) : void
-        +Delete(id : string) : void
+      + AddAsync(device)
+      + UpdateAsync(device)
+      + FindByIdAsync(id)
+      + FindByOwnerUserIdAsync(ownerUserId)
     }
+
+    Device *-- DeviceName
+    Device *-- DeviceType
+    Device *-- DeviceStatus
+    Device *-- DeviceLocation
+    Device *-- DeviceThreshold
+    Device o-- Sensor
+  }
+
+  package "Monitoring" {
+    class MonitoringSession <<AggregateRoot>> {
+      - Id : Guid
+      - DeviceId : Guid
+      - StartedAtUtc : DateTime
+      - Readings : IReadOnlyCollection<SensorReading>
+      - Events : IReadOnlyCollection<MonitoringEvent>
+      + AddReading(reading)
+      + AddEvent(event)
+    }
+
+    class SensorReading <<Entity>> {
+      - Id : Guid
+      - DeviceId : Guid
+      - SensorId : Guid
+      - Value : ReadingValue
+      - Unit : ReadingUnit
+      - RecordedAtUtc : DateTime
+    }
+
+    class MonitoringEvent <<Entity>> {
+      - Id : Guid
+      - Type : string
+      - Description : string
+      - CreatedAtUtc : DateTime
+    }
+
+    class ReadingValue <<ValueObject>> {
+      - Value : decimal
+    }
+
+    class ReadingUnit <<ValueObject>> {
+      - Value : string
+    }
+
+    interface IMonitoringRepository {
+      + AddAsync(session)
+      + UpdateAsync(session)
+      + FindByIdAsync(id)
+      + FindByDeviceIdAsync(deviceId)
+    }
+
+    MonitoringSession o-- SensorReading
+    MonitoringSession o-- MonitoringEvent
+    SensorReading *-- ReadingValue
+    SensorReading *-- ReadingUnit
+  }
+
+  package "IncidentManagement" {
+    class Incident <<AggregateRoot>> {
+      - Id : Guid
+      - DeviceId : Guid
+      - ReportedByUserId : Guid
+      - AssignedUserId : Guid?
+      - Severity : IncidentSeverity
+      - Status : IncidentStatus
+      - Description : IncidentDescription
+      - CreatedAtUtc : DateTime
+      - History : IReadOnlyCollection<IncidentHistoryEntry>
+      + AssignTo(userId)
+      + ChangeStatus(status, note)
+    }
+
+    class IncidentHistoryEntry <<Entity>> {
+      - Id : Guid
+      - Status : string
+      - Note : string
+      - CreatedAtUtc : DateTime
+    }
+
+    class IncidentSeverity <<ValueObject>> {
+      - Value : string
+    }
+
+    class IncidentStatus <<ValueObject>> {
+      - Value : string
+    }
+
+    class IncidentDescription <<ValueObject>> {
+      - Value : string
+    }
+
+    interface IIncidentRepository {
+      + AddAsync(incident)
+      + UpdateAsync(incident)
+      + FindByIdAsync(id)
+      + FindByDeviceIdAsync(deviceId)
+    }
+
+    Incident *-- IncidentSeverity
+    Incident *-- IncidentStatus
+    Incident *-- IncidentDescription
+    Incident o-- IncidentHistoryEntry
+  }
+
+  package "NotificationManagement" {
+    class Notification <<AggregateRoot>> {
+      - Id : Guid
+      - RecipientUserId : Guid
+      - Channel : NotificationChannel
+      - Message : NotificationMessage
+      - Status : NotificationStatus
+      - CreatedAtUtc : DateTime
+      - Attempts : IReadOnlyCollection<NotificationAttempt>
+      + MarkAsSent()
+      + MarkAsPending()
+      + AddAttempt(attempt)
+    }
+
+    class NotificationAttempt <<Entity>> {
+      - Id : Guid
+      - AttemptedAtUtc : DateTime
+      - Result : string
+    }
+
+    class NotificationChannel <<ValueObject>> {
+      - Value : string
+    }
+
+    class NotificationMessage <<ValueObject>> {
+      - Title : string
+      - Body : string
+    }
+
+    class NotificationStatus <<ValueObject>> {
+      - Value : string
+    }
+
+    interface INotificationRepository {
+      + AddAsync(notification)
+      + UpdateAsync(notification)
+      + FindByIdAsync(id)
+      + FindByRecipientUserIdAsync(userId)
+    }
+
+    Notification *-- NotificationChannel
+    Notification *-- NotificationMessage
+    Notification *-- NotificationStatus
+    Notification o-- NotificationAttempt
+  }
+
+  package "Reporting" {
+    class ConsumptionReport <<AggregateRoot>> {
+      - Id : Guid
+      - OwnerUserId : Guid
+      - Period : ReportPeriod
+      - TotalWaterConsumption : ConsumptionValue
+      - TotalGasConsumption : ConsumptionValue
+      - GeneratedAtUtc : DateTime
+      - Lines : IReadOnlyCollection<ReportLine>
+      + AddLine(line)
+    }
+
+    class ReportLine <<Entity>> {
+      - Id : Guid
+      - Label : string
+      - WaterConsumption : decimal
+      - GasConsumption : decimal
+    }
+
+    class ReportPeriod <<ValueObject>> {
+      - Value : string
+    }
+
+    class ConsumptionValue <<ValueObject>> {
+      - Value : decimal
+      - Unit : string
+    }
+
+    interface IConsumptionReportRepository {
+      + AddAsync(report)
+      + UpdateAsync(report)
+      + FindByIdAsync(id)
+      + FindByOwnerUserIdAsync(userId)
+      + FindByOwnerUserIdAndPeriodAsync(userId, period)
+    }
+
+    ConsumptionReport *-- ReportPeriod
+    ConsumptionReport *-- ConsumptionValue
+    ConsumptionReport o-- ReportLine
+  }
 }
 
-package "LowCortisol.Application" {
-    class DeviceService {
-        +GetDevices() : IEnumerable<Device>
-        +GetDeviceById(id : string) : Device
-        +AddDevice(device : Device) : void
-        +UpdateDevice(device : Device) : void
-        +DeleteDevice(id : string) : void
+package "Application" {
+
+  package "Common" {
+    interface IUnitOfWork {
+      + SaveChangesAsync()
     }
+  }
+
+  package "IdentityAccess" {
+    class RegisterUserCommand
+    class LoginUserCommand
+    class UserDto
+
+    interface IIdentityAccessService {
+      + RegisterAsync(command)
+      + LoginAsync(command)
+      + GetByIdAsync(id)
+    }
+
+    interface IPasswordHasher {
+      + Hash(plainTextPassword)
+      + Verify(plainTextPassword, hash)
+    }
+  }
+
+  package "DeviceManagement" {
+    class RegisterDeviceCommand
+    class UpdateDeviceStatusCommand
+    class DeviceDto
+
+    interface IDeviceManagementService {
+      + RegisterAsync(command)
+      + UpdateStatusAsync(command)
+      + GetByOwnerAsync(ownerUserId)
+    }
+  }
+
+  package "Monitoring" {
+    class MonitoringAlertFactory
+    class ThresholdEvaluationResult
+
+    interface IThresholdEvaluator {
+      + Evaluate(reading, threshold)
+    }
+
+    interface IMonitoringService {
+      + ProcessReadingAsync(...)
+    }
+  }
+
+  package "IncidentManagement" {
+    class CreateIncidentCommand
+    class AssignIncidentCommand
+    class UpdateIncidentStatusCommand
+    class IncidentDto
+
+    interface IIncidentManagementService {
+      + CreateAsync(command)
+      + AssignAsync(command)
+      + UpdateStatusAsync(command)
+      + GetByDeviceAsync(deviceId)
+    }
+  }
+
+  package "NotificationManagement" {
+    class NotificationDto
+
+    interface INotificationManagementService {
+      + NotifyAsync(...)
+      + GetByRecipientAsync(userId)
+    }
+
+    interface INotificationSender {
+      + SendAsync(notification)
+    }
+  }
+
+  package "Reporting" {
+    class GenerateConsumptionReportCommand
+    class ConsumptionReportDto
+
+    interface IReportingService {
+      + GenerateAsync(command)
+      + GetByOwnerAsync(ownerUserId)
+      + GetByOwnerAndPeriodAsync(ownerUserId, period)
+    }
+  }
 }
 
-package "LowCortisol.Web.Auth" {
-    class AppUser {
-        +Id : int
-        +Name : string
-        +Email : string
-        +Phone : string
-        +PasswordHash : string
-        +AccountType : string
-    }
+package "Infrastructure" {
+  class AppDbContext
+  class AppUnitOfWork
+  class CurrentUserSession
+  class BcryptPasswordHasher
+  class ConsoleNotificationSender
+  class ThresholdEvaluator
 
-    class AppDbContext {
-        +Users : DbSet<AppUser>
-    }
-
-    class AuthService {
-        +RegisterAsync(name, email, phone, password, accountType)
-        +LoginAsync(email, password)
-        +LogoutAsync()
-        +GetCurrentUserAsync() : AppUser
-        +IsAuthenticatedAsync() : bool
-    }
+  class UserAccountRepository
+  class DeviceRepository
+  class MonitoringRepository
+  class IncidentRepository
+  class NotificationRepository
+  class ConsumptionReportRepository
 }
 
-SmartValve --|> Device
-Device "1" *-- "0..*" DeviceDetail
-DeviceService ..> IDeviceRepository
-DeviceService ..> Device
-DeviceService ..> Report
+package "Presentation" {
+  class LoginPage
+  class RegisterPage
+  class HomePage
+  class DevicesPage
+  class ReportsPage
+  class AlertsPage
+  class ProfilePage
 
-AppDbContext "1" *-- "0..*" AppUser
-AuthService ..> AppDbContext
-AuthService ..> AppUser
+  class I18nService
+  class BrowserSessionService
+  class UiSessionService
+}
+
+IIdentityAccessService ..> IUserAccountRepository
+IIdentityAccessService ..> IPasswordHasher
+IDeviceManagementService ..> IDeviceRepository
+IMonitoringService ..> IMonitoringRepository
+IMonitoringService ..> IThresholdEvaluator
+IIncidentManagementService ..> IIncidentRepository
+INotificationManagementService ..> INotificationRepository
+INotificationManagementService ..> INotificationSender
+IReportingService ..> IConsumptionReportRepository
+
+UserAccountRepository ..|> IUserAccountRepository
+DeviceRepository ..|> IDeviceRepository
+MonitoringRepository ..|> IMonitoringRepository
+IncidentRepository ..|> IIncidentRepository
+NotificationRepository ..|> INotificationRepository
+ConsumptionReportRepository ..|> IConsumptionReportRepository
+
+AppUnitOfWork ..|> IUnitOfWork
+BcryptPasswordHasher ..|> IPasswordHasher
+ConsoleNotificationSender ..|> INotificationSender
+ThresholdEvaluator ..|> IThresholdEvaluator
+
+UserAccountRepository ..> AppDbContext
+DeviceRepository ..> AppDbContext
+MonitoringRepository ..> AppDbContext
+IncidentRepository ..> AppDbContext
+NotificationRepository ..> AppDbContext
+ConsumptionReportRepository ..> AppDbContext
+
+LoginPage ..> IIdentityAccessService
+RegisterPage ..> IIdentityAccessService
+HomePage ..> I18nService
+DevicesPage ..> IDeviceManagementService
+ReportsPage ..> IReportingService
+AlertsPage ..> IIncidentManagementService
+ProfilePage ..> IIdentityAccessService
+
+LoginPage ..> BrowserSessionService
+RegisterPage ..> BrowserSessionService
+HomePage ..> UiSessionService
+DevicesPage ..> UiSessionService
+ReportsPage ..> UiSessionService
+AlertsPage ..> UiSessionService
+ProfilePage ..> UiSessionService
+
+Device --> UserAccount : OwnerUserId
+MonitoringSession --> Device : DeviceId
+Incident --> Device : DeviceId
+Incident --> UserAccount : ReportedByUserId
+Notification --> UserAccount : RecipientUserId
+ConsumptionReport --> UserAccount : OwnerUserId
 
 @enduml

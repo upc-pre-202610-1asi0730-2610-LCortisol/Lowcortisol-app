@@ -1,18 +1,150 @@
 ﻿@startuml
-hide circle
+hide methods
+hide stereotypes
 skinparam linetype ortho
-skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam classAttributeIconSize 0
 
 title LowCortisol - Database Diagram
 
-entity "AppUser" as AppUser {
-  * Id : int <<PK>>
+entity "user_accounts" as user_accounts {
+  * id : UUID
   --
-  * Name : string
-  * Email : string <<UK>>
-  Phone : string
-  * PasswordHash : string
-  * AccountType : string
+  name : varchar(120)
+  email : varchar(180) <<unique>>
+  phone : varchar(40)
+  password_hash : text
+  role : varchar(40)
+  is_active : boolean
 }
+
+entity "devices" as devices {
+  * id : UUID
+  --
+  owner_user_id : UUID <<FK>>
+  name : varchar(120)
+  type : varchar(60)
+  status : varchar(40)
+  location : varchar(120)
+  threshold_value : decimal(18,2)
+  threshold_unit : varchar(20)
+}
+
+entity "sensors" as sensors {
+  * id : UUID
+  --
+  device_id : UUID <<FK>>
+  name : varchar(120)
+  type : varchar(60)
+  unit : varchar(20)
+  is_active : boolean
+}
+
+entity "monitoring_sessions" as monitoring_sessions {
+  * id : UUID
+  --
+  device_id : UUID <<FK>>
+  started_at_utc : datetime
+}
+
+entity "sensor_readings" as sensor_readings {
+  * id : UUID
+  --
+  monitoring_session_id : UUID <<FK>>
+  device_id : UUID <<FK>>
+  sensor_id : UUID <<FK>>
+  value : decimal(18,2)
+  unit : varchar(20)
+  recorded_at_utc : datetime
+}
+
+entity "monitoring_events" as monitoring_events {
+  * id : UUID
+  --
+  monitoring_session_id : UUID <<FK>>
+  type : varchar(60)
+  description : varchar(300)
+  created_at_utc : datetime
+}
+
+entity "incidents" as incidents {
+  * id : UUID
+  --
+  device_id : UUID <<FK>>
+  reported_by_user_id : UUID <<FK>>
+  assigned_user_id : UUID <<FK, nullable>>
+  severity : varchar(30)
+  status : varchar(30)
+  description : varchar(500)
+  created_at_utc : datetime
+}
+
+entity "incident_history_entries" as incident_history_entries {
+  * id : UUID
+  --
+  incident_id : UUID <<FK>>
+  status : varchar(30)
+  note : varchar(300)
+  created_at_utc : datetime
+}
+
+entity "notifications" as notifications {
+  * id : UUID
+  --
+  recipient_user_id : UUID <<FK>>
+  channel : varchar(30)
+  title : varchar(150)
+  body : varchar(600)
+  status : varchar(30)
+  created_at_utc : datetime
+}
+
+entity "notification_attempts" as notification_attempts {
+  * id : UUID
+  --
+  notification_id : UUID <<FK>>
+  attempted_at_utc : datetime
+  result : varchar(100)
+}
+
+entity "consumption_reports" as consumption_reports {
+  * id : UUID
+  --
+  owner_user_id : UUID <<FK>>
+  period : varchar(10)
+  total_water_consumption : decimal(18,2)
+  total_water_unit : varchar(20)
+  total_gas_consumption : decimal(18,2)
+  total_gas_unit : varchar(20)
+  generated_at_utc : datetime
+}
+
+entity "report_lines" as report_lines {
+  * id : UUID
+  --
+  consumption_report_id : UUID <<FK>>
+  label : varchar(100)
+  water_consumption : decimal(18,2)
+  gas_consumption : decimal(18,2)
+}
+
+user_accounts ||--o{ devices : owns
+devices ||--o{ sensors : contains
+
+devices ||--o{ monitoring_sessions : generates
+monitoring_sessions ||--o{ sensor_readings : records
+monitoring_sessions ||--o{ monitoring_events : raises
+sensors ||--o{ sensor_readings : produces
+
+devices ||--o{ incidents : has
+user_accounts ||--o{ incidents : reports
+user_accounts ||--o{ incidents : assigned
+incidents ||--o{ incident_history_entries : tracks
+
+user_accounts ||--o{ notifications : receives
+notifications ||--o{ notification_attempts : retries
+
+user_accounts ||--o{ consumption_reports : owns
+consumption_reports ||--o{ report_lines : details
 
 @enduml
